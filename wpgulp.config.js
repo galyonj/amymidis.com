@@ -16,21 +16,21 @@ module.exports = {
 	injectChanges: true,
 
 	// Style options.
-	styleSRC: './dev/css/main.scss', // Path to main .scss file.
-	styleDestination: './site/web/app/themes/amymidis.com/', // Path to place the compiled CSS file. Default set to root folder.
+	styleSRC: './dev/css/*.scss', // Path to main .scss file.
+	styleDestination: './site/web/app/themes/amymidis.com/assets/css', // Path to place the compiled CSS file. Default set to root folder.
 	outputStyle: 'compact', // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
 	errLogToConsole: true,
 	precision: 10,
 
 	// JS Vendor options.
 	jsVendorSRC: './dev/js/vendor/*.js', // Path to JS vendor folder.
-	jsVendorDestination: './site/web/app/themes/amymidis.com/', // Path to place the compiled JS vendors file.
+	jsVendorDestination: './site/web/app/themes/amymidis.com/assets/js', // Path to place the compiled JS vendors file.
 	jsVendorFile: 'vendor', // Compiled JS vendors file name. Default set to vendors i.e. vendors.js.
 
 	// JS Custom options.
 	jsCustomSRC: './dev/js/*.js', // Path to JS custom scripts folder.
-	jsCustomDestination: './site/web/app/themes/amymidis.com/', // Path to place the compiled JS custom scripts file.
-	jsCustomFile: 'custom', // Compiled JS custom file name. Default set to custom i.e. custom.js.
+	jsCustomDestination: './site/web/app/themes/amymidis.com/assets/js', // Path to place the compiled JS custom scripts file.
+	jsCustomFile: 'main', // Compiled JS custom file name. Default set to custom i.e. custom.js.
 
 	// Images options.
 	imgSRC: './assets/img/raw/**/*', // Source folder of images which should be optimized and watched. You can also specify types e.g. raw/**.{png,jpg,gif} in the glob.

@@ -1,0 +1,345 @@
+/**
+ * Custom editor styles for Amymidis.com
+ * Version: 1.0.0
+ * Text Domain: covenant
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ *
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans');
+
+@import 'partial/variables';
+
+/*
+ * Anything within the body#tinymce block is for controlling
+ * the appearance of content within the WYSIWYG editor
+ */
+
+#tinymce {
+	font-family: $font-family-sans-serif;
+	font-size:   $font-size-base;
+	font-weight: 300;
+	line-height: $line-height-base;
+	margin:      15px 30px;
+
+	// Headings
+	h2, h3, h4, h5, h6 {
+		color:       $headings-color;
+		font-family: $headings-font-family;
+		font-weight: $headings-font-weight;
+		line-height: $headings-line-height;
+	}
+	h2 {
+		font-size: $font-size-h2;
+	}
+	h3 {
+		font-size: $font-size-h3;
+	}
+	h4 {
+		font-size: $font-size-h4;
+	}
+	h5 {
+		font-size: $font-size-h5;
+	}
+	h6 {
+		font-size: $font-size-h6;
+	}
+
+	h2, h3 {
+		margin-bottom: ($line-height-computed / 2);
+		margin-top:    $line-height-computed;
+	}
+
+	h4, h5, h6 {
+		margin-bottom: ($line-height-computed / 2);
+		margin-top:    ($line-height-computed / 2);
+	}
+
+	a {
+		color:           $brand-primary;
+		font-weight:     600;
+		text-decoration: none;
+	}
+
+	blockquote {
+		border-left: 10px solid $blockquote-border-color;
+		font-size:   $blockquote-font-size;
+		margin:      0 0 $line-height-computed;
+		padding:     ($line-height-computed / 2) $line-height-computed;
+
+		p {
+			&:first-of-type {
+				margin-top: 0;
+			}
+		}
+
+		footer {
+			color:       $blockquote-small-color;
+			display:     block;
+			font-size:   $font-size-base; // back to default font-size
+			line-height: $line-height-base;
+
+			&:before {
+				content: '\2014 \00A0'; // em dash, nbsp
+			}
+		}
+	}
+
+	.lead {
+		font-size:     floor(($font-size-base * 1.15));
+		font-weight:   300;
+		line-height:   1.4;
+		margin-bottom: $line-height-computed;
+
+		@media (min-width: $screen-sm-min) {
+			font-size: ($font-size-base * 1.5);
+		}
+	}
+
+	.btn {
+		background-color: $brand-primary;
+		background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+		border:           1px solid transparent;
+		border-radius:    $border-radius-base;
+		color:            #fff;
+		display:          inline-block;
+		font-size:        $font-size-base;
+		font-weight:      400;
+		line-height:      $line-height-base;
+		margin-bottom:    0; // For input.btn
+		padding:          $padding-base-vertical $padding-base-horizontal;
+		text-align:       center;
+		vertical-align:   middle;
+		white-space:      nowrap;
+	}
+
+	.well {
+		background-color: $well-bg;
+		border:           1px solid $well-border;
+		border-radius:    $border-radius-base;
+		box-shadow:       inset 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+		margin-bottom:    20px;
+		min-height:       20px;
+		padding:          19px;
+
+		> h2,
+		> h3 {
+			margin-top: 0;
+		}
+
+		p {
+			&:last-of-type,
+			&:only-of-type {
+				margin: 0 !important;
+			}
+		}
+
+		&.half-left, &.half-right {
+			float:  none;
+			margin: 20px 0 0 0;
+			width:  100%;
+		}
+
+		&.half-left {
+			float:  left;
+			margin: 0 20px 20px 0;
+			width:  50%;
+		}
+
+		@media #{ $small } {
+			&.half-left {
+				float:  left;
+				margin: 0 20px 20px 0;
+				width:  50%;
+			}
+			&.half-right {
+				float:  right;
+				margin: 0 0 20px 20px;
+				width:  50%;
+			}
+		}
+	}
+
+	// List Styles
+	ol:not( [ class ] ) {
+		display:      table;
+		margin-left:  0;
+		padding-left: 0;
+
+		li {
+			counter-increment: table-ol;
+			display:           table-row;
+			float:             none;
+			font-weight:       300;
+			list-style:        none;
+
+			&:before {
+				content:       counter(table-ol) ".";
+				display:       table-cell;
+				padding-right: 10px;
+				text-align:    right;
+			}
+		}
+	}
+
+	ul {
+		&.text-columns,
+		&.list--multi-col {
+			column-count: 2;
+			column-gap:   30px;
+			margin:       0 0 ($line-height-computed / 2);
+			padding:      0;
+
+			li {
+				font-weight: 300;
+			}
+		}
+
+
+		&.two-column,
+		&.three-column {
+			display:    flex;
+			flex-wrap:  wrap;
+			list-style: none;
+			margin:     0;
+			padding:    0;
+			width:      100%;
+		}
+
+		&.two-column {
+			li {
+				align-items: flex-start;
+				margin:      0 auto 30px 0;
+				width:       48.5%;
+
+				&:nth-of-type( even ) {
+					margin: 0 0 30px 0;
+				}
+			}
+		}
+
+		&.three-column {
+			li {
+				align-items: flex-start;
+				margin:      0 auto 30px 0;
+				width:       31.5%;
+
+				&:nth-of-type( 3n ) {
+					margin: 0 0 30px 0;
+				}
+			}
+		}
+
+		// Basic bulleted and ordered list style
+		&:not( [ class ] ) {
+			display:      table;
+			margin-left:  0;
+			padding-left: 0;
+
+			li {
+				display:     table-row;
+				float:       none;
+				font-weight: 300;
+				list-style:   none;
+
+				&:before {
+					content:       "\25FC";
+					display:       table-cell;
+					padding-right: 10px;
+				}
+			}
+		}
+	}
+
+	// Images and related stuff
+	img {
+		height:  auto;
+
+		&.aligncenter {
+			margin: 0 0 20px;
+			width: 100%;
+			height: auto;
+		}
+		&.alignleft {
+			float: left;
+			margin: 0 20px 20px 0;
+			width: 50%;
+
+			&.headshot {
+				width: 30%;
+			}
+		}
+		&.alignnone {
+			margin: 0 0 20px;
+			width:  100%;
+		}
+		&.alignright {
+			float:   right;
+			margin:  0 0 20px 20px;
+			width:   50%;
+
+			&.headshot {
+				width:   30%;
+			}
+		}
+	}
+
+	.mceTemp {
+		float:  right;
+		height: auto;
+		margin: 0 0 20px 20px;
+		width:  50%;
+
+		dl {
+			&.wp-caption {
+				border:  1px solid lighten( $text-color, 65% );
+				height:  auto;
+				padding: 5px;
+
+				&.aligncenter {
+					margin:  0 0 20px;
+					width:   100%;
+				}
+				&.alignleft {
+					float:  left;
+					margin: 0 20px 20px 0;
+					width:  50%;
+
+					&.headshot {
+						width: 30%;
+					}
+				}
+				&.alignnone {
+					margin:  0 0 20px;
+					width:   100%;
+				}
+				&.alignright {
+					float:   right;
+					margin:  0 0 20px 20px;
+					width:   50%;
+
+					&.headshot {
+						width: 30%;
+					}
+				}
+			}
+		}
+	}
+}

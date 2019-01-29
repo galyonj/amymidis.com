@@ -107,9 +107,9 @@ $padding-xs-horizontal:     5px !default;
 $line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
 $line-height-small:         1.5 !default;
 
-$border-radius-base:        0px !default;
-$border-radius-large:       0px !default;
-$border-radius-small:       0px !default;
+$border-radius-base:        4px !default;
+$border-radius-large:       6px !default;
+$border-radius-small:       3px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff !default;
@@ -872,3 +872,15 @@ $dl-horizontal-offset:        $component-offset-horizontal !default;
 $dl-horizontal-breakpoint:    $grid-float-breakpoint !default;
 //** Horizontal line color.
 $hr-border:                   $gray-lighter !default;
+
+// Basic speed/easing variables for later
+$speed: 400ms;
+$easing: ease-in-out;
+
+// Screen size variables that are easier to remember than
+// those provided by bootstrap.
+$xsmall:  "screen and ( max-width: 767px )";
+$small:   "screen and ( min-width: 768px )";
+$medium:  "screen and ( min-width: 992px )";
+$large:   "screen and ( min-width: 1200px )";
+$highdpi: "(-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-device-pixel-ratio: 2)";
