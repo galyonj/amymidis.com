@@ -34,5 +34,31 @@ var scroll = new SmoothScroll('a[href*="#"]', {
         $('.scroll-top').fadeOut();
       }
     });
+    $('.ginput_card_security_code_icon').remove(); //populateOther();
+  }); // This function pushes the footer down
+  // on pages that have short content
+
+  $(window).on('load resize', function stickyFooter() {
+    // sticky footer stuff
+    var windowHeight = $(window).height(),
+        adminbarHeight = $('#wpadminbar').height(),
+        contentHeight = $('.wrapper').outerHeight(),
+        footerHeight = $('footer').outerHeight();
+
+    if (contentHeight + footerHeight < windowHeight) {
+      if ($('#wpadminbar').length) {
+        $('.wrapper').css('margin-bottom', windowHeight - (contentHeight + footerHeight + adminbarHeight));
+      } else {
+        $('.wrapper').css('margin-bottom', windowHeight - (contentHeight + footerHeight));
+      }
+    }
+  });
+  var otherText = $('#input_1_13_other'),
+      otherTextValue = otherText.val();
+  $('#input_1_13_other').on('blur', function () {
+    if (!isNaN(otherTextValue)) {
+      $('#choice_1_13_6').val(otherTextValue);
+      $('#input_1_43').text('$' + otherTextValue);
+    }
   });
 })(jQuery);
