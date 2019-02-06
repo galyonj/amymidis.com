@@ -13,6 +13,7 @@
 
 		label {
 			font-size:     $font-size-small;
+			font-weight:   300;
 			margin-bottom: 0;
 
 			> .gfield_required {
@@ -24,6 +25,7 @@
 			@extend .form-control;
 			font-weight:   300;
 			border-radius: $border-radius-small;
+			font-size:     $font-size-small;
 
 			&::placeholder {
 				font-weight: 300 !important;
@@ -44,7 +46,32 @@
 		&.gf_quarter {
 			@extend .col-xs-3;
 		}
+
+		&.gf_three_col {
+			@extend .col-xs-3;
+		}
+
+		&.gf_credit_card_number {
+			@extend .col-xs-6;
+			@extend .col-sm-4;
+		}
+
+		&.gf_credit_card_expiry,
+		&.gf_credit_card_security {
+			@extend .col-xs-3;
+			@extend .col-sm-2;
+		}
+
+		&.gf_credit_card_holder {
+			@extend .col-xs-12;
+			@extend .col-sm-4;
+		}
 	}
+}
+
+.gform_button {
+	@extend .btn;
+	@extend .btn-primary;
 }
 
 .gfield_checkbox {
@@ -126,13 +153,13 @@
 		+ label {
 			background:      lighten($brand-primary, 50%);
 			border-radius:   $border-radius-small;
-			border:          2px solid $brand-primary;
+			border:          1px solid $brand-primary;
 			color:           $brand-primary;
 			cursor:          pointer;
 			display:         block;
 			float:           none;
 			font-size:       $font-size-large;
-			font-weight:     700;
+			font-weight:     400;
 			line-height:     1;
 			margin:          0;
 			max-width:       100%;
@@ -152,30 +179,35 @@
 		}
 	}
 
-	input[type=text] {
-		background:      lighten($brand-primary, 50%);
+	input[type=text],
+	input[type=number] {
+		background:      #fff !important;
 		border-radius:   $border-radius-small;
-		border:          2px solid $brand-primary;
-		color:           $brand-primary;
+		border:          1px solid $brand-primary !important;
+		color:           $brand-primary !important;
 		cursor:          pointer;
 		display:         block;
 		float:           none;
-		font-size:       $font-size-large;
-		font-weight:     700;
-		height:          46px;
+		font-size:       $font-size-large !important;
+		font-weight:     400;
+		height:          44px !important;
 		line-height:     1;
 		margin:          0;
 		max-width:       100%;
-		padding:         10px 30px;
+		padding:         10px;
 		position:        relative;
-		text-align:      center;
+		text-align:      center !important;
 		text-decoration: none;
 		transition:      $speed $easing all;
 		width:           100%;
 
 		&:focus {
-			background: #fff;
-			color:      $brand-primary;
+			background: #fff !important;
+			color:      $brand-primary !important;
+		}
+
+		&::placeholder {
+			font-weight: 300 !important;
 		}
 	}
 
@@ -200,6 +232,14 @@
 			display: none;
 		}
 	}
+
+	.gfield_creditcard_warning_message {
+		@extend .alert;
+		@extend .alert-danger;
+		font-size: $font-size-small;
+		padding:   5px 10px;
+		margin:    5px 0 0;
+	}
 }
 
 .gform_validation_error {
@@ -220,8 +260,64 @@
 
 @media #{$small} {
 	.gfield_radio {
+		input[type=radio] {
+			display: none;
+
+			+ label {
+				font-size: $font-size-base;
+			}
+		}
+
+		input[type=text],
+		input[type=number] {
+			font-size:  $font-size-base !important;
+			height:     40px !important;
+			padding:    0 !important;
+			text-align: center !important;
+		}
+
 		li {
 			width: 25% !important;
+
+			&:nth-of-type(2n) {
+				padding: 0 10px 10px 0;
+			}
+
+			&:nth-of-type(4n) {
+				padding: 0 0 10px 0;
+			}
+		}
+	}
+}
+
+@media #{$medium} {
+	.gfield_radio {
+		input[type=radio] {
+			display: none;
+
+			+ label {
+				font-size: $font-size-large;
+			}
+		}
+
+		input[type=text],
+		input[type=number] {
+			font-size:  $font-size-large !important;
+			height:     44px !important;
+			padding:    10px !important;
+			text-align: center !important;
+		}
+
+		li {
+			width: 25% !important;
+
+			&:nth-of-type(2n) {
+				padding: 0 10px 10px 0;
+			}
+
+			&:nth-of-type(4n) {
+				padding: 0 0 10px 0;
+			}
 		}
 	}
 }

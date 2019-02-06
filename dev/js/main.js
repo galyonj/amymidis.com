@@ -18,6 +18,8 @@ const scroll = new SmoothScroll( 'a[href*="#"]', {
 } );
 
 ( function() {
+	let otherText = $( '#input_1_13_other' );
+
 	$( document ).ready( function() {
 		$( '.scroll-top' ).hide();
 
@@ -36,7 +38,13 @@ const scroll = new SmoothScroll( 'a[href*="#"]', {
 
 		$( '.ginput_card_security_code_icon' ).remove();
 
-		//populateOther();
+		otherText.inputmask({
+			alias: 'currency',
+			allowMinus: false,
+			clearMaskOnLostFocus: false,
+			digits: 2,
+			prefix: '$'
+		}).attr('pattern', '[0-9]*');
 	} );
 
 	// This function pushes the footer down
@@ -58,14 +66,9 @@ const scroll = new SmoothScroll( 'a[href*="#"]', {
 		}
 	} );
 
-	let otherText = $( '#input_1_13_other' ),
-		otherTextValue = otherText.val();
+	otherText.on( 'change', function() {
 
-	$( '#input_1_13_other' ).on( 'blur', function() {
-		if ( ! isNaN( otherTextValue ) ) {
-			$( '#choice_1_13_6' ).val( otherTextValue );
-
-			$( '#input_1_43' ).text( '$' + otherTextValue );
-		}
+		$( '#input_1_43' ).text( otherText.val() );
+		$( '#ginput_base_price_1_43' ).val( otherText.val() );
 	} );
 }( jQuery ) );

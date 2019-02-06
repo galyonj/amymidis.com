@@ -22,6 +22,7 @@ var scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 (function () {
+  var otherText = $('#input_1_13_other');
   $(document).ready(function () {
     $('.scroll-top').hide();
     $(window).scroll(function showScrollButton() {
@@ -34,7 +35,14 @@ var scroll = new SmoothScroll('a[href*="#"]', {
         $('.scroll-top').fadeOut();
       }
     });
-    $('.ginput_card_security_code_icon').remove(); //populateOther();
+    $('.ginput_card_security_code_icon').remove();
+    otherText.inputmask({
+      alias: 'currency',
+      allowMinus: false,
+      clearMaskOnLostFocus: false,
+      digits: 2,
+      prefix: '$'
+    }).attr('pattern', '[0-9]*');
   }); // This function pushes the footer down
   // on pages that have short content
 
@@ -53,12 +61,8 @@ var scroll = new SmoothScroll('a[href*="#"]', {
       }
     }
   });
-  var otherText = $('#input_1_13_other'),
-      otherTextValue = otherText.val();
-  $('#input_1_13_other').on('blur', function () {
-    if (!isNaN(otherTextValue)) {
-      $('#choice_1_13_6').val(otherTextValue);
-      $('#input_1_43').text('$' + otherTextValue);
-    }
+  otherText.on('change', function () {
+    $('#input_1_43').text(otherText.val());
+    $('#ginput_base_price_1_43').val(otherText.val());
   });
 })(jQuery);

@@ -1,9 +1,12 @@
 h1, h2, h3, h4, h5, h6 {
-	color: $brand-primary;
+	color:       $brand-primary;
+	font-weight: 600;
 }
 
 p {
+	font-weight: 300;
+
 	a {
-		font-weight: 700;
+		font-weight: 600;
 	}
 }
