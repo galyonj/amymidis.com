@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Quattrocento+Sans");#tinymce{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:18px;font-weight:300;line-height:1.44;margin:15px 30px}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,600,600i");#tinymce{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:18px;font-weight:300;line-height:1.44;margin:15px 30px}
 #tinymce h2,#tinymce h3,#tinymce h4,#tinymce h5,#tinymce h6{color:inherit;font-family:inherit;font-weight:700;line-height:1.1}
 #tinymce h2{font-size:31px}
 #tinymce h3{font-size:26px}
@@ -47,6 +47,7 @@
 #tinymce .mceTemp dl.wp-caption.alignnone{margin:0 0 20px;width:100%}
 #tinymce .mceTemp dl.wp-caption.alignright{float:right;margin:0 0 20px 20px;width:50%}
 #tinymce .mceTemp dl.wp-caption.alignright.headshot{width:30%}
+body p{font-weight:300 !important}
 @media(min-width:768px){#tinymce .lead{font-size:27px}
 }@media screen and (min-width:768px){#tinymce .well.half-left{float:left;margin:0 20px 20px 0;width:50%}
 #tinymce .well.half-right{float:right;margin:0 0 20px 20px;width:50%}

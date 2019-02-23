@@ -9,14 +9,19 @@
 get_header();
 if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
-	<div class="container" id="content">
-		<?php get_template_part( 'views/content', 'masthead' ); ?>
-		<?php get_template_part( 'views/content', 'notification' ); ?>
+	<main class="container">
+		<?php get_template_part( 'view/content', 'header' ); ?>
+		<div class="row content-row">
 
-		<main id="<?php the_ID(); ?>" <?php body_class(); ?>>
-			<?php get_template_part( 'view/content', 'article' ); ?>
-		</main>
-	</div>
+			<?php if( !is_front_page() ) : ?>
+			<article id="<?php the_ID(); ?>" <?php body_class( 'col-xs-12 col-md-8' ); ?>>
+				<?php else : ?>
+			<article id="<?php the_ID(); ?>" <?php body_class( 'col-xs-12 col-md-8 col-md-offset-2' ); ?>>
+					<?php endif; ?>
+					<?php the_content(); ?>
+				</article>
+		</div>
+	</main>
 
 <?php endwhile; endif;
 get_footer(); ?>

@@ -5,6 +5,26 @@
 	.gfield {
 		@extend .col-xs-12;
 
+		&.gfield_visibility_hidden,
+		.ginput_product_price_label {
+			display: none !important;
+		}
+
+		&.gf_contribution_total {
+			.gfield_label {
+				@extend h5;
+				margin: 0;
+			}
+
+			.ginput_container_product_calculation {
+				margin-top: 15px;
+			}
+
+			.ginput_product_price {
+				@extend h4;
+			}
+		}
+
 		&.hidden_label {
 			label.gfield_label {
 				display: none;
@@ -69,155 +89,169 @@
 	}
 }
 
+.gfield_html {
+	p {
+		margin-bottom: 0;
+	}
+}
+
 .gform_button {
 	@extend .btn;
 	@extend .btn-primary;
+	margin-bottom: 15px;
 }
 
-.gfield_checkbox {
-	margin:          0;
-	padding:         0;
-	list-style-type: none;
+.gf_employment_status_check {
+	.gfield_checkbox {
+		margin:          0;
+		padding:         0;
+		list-style-type: none;
 
-	input[type=checkbox] {
-		display: none;
-
-		+ label {
-			cursor:      pointer;
-			display:     block;
-			font-size:   ceil(($font-size-base * 0.9));
-			margin-left: 35px;
-			padding:     0;
-
-			&:active:before {
-				transform: scale(0);
+		label {
+			&:after {
+				clear:   both;
+				content: '';
+				display: table;
 			}
 
-			&:before {
-				content:        "\2713";
-				border:         2px solid $text-color;
-				border-radius:  $border-radius-small;
-				display:        inline-block;
-				width:          25px;
-				height:         25px;
-				padding-left:   4px;
-				padding-bottom: 5px;
-				margin-right:   10px;
-				margin-left:    -35px;
-				vertical-align: middle;
-				color:          transparent;
-				transition:     .2s;
-			}
-		}
+			input[type="checkbox"] {
+				display: none;
 
-		&:checked {
-			+ label:before {
-				background-color: $brand-primary;
-				border-color:     $brand-primary;
-				color:            #fff;
-			}
-		}
+				+ .cr {
+					> .cr-icon {
+						transform:  scale(3) rotateZ(-20deg);
+						opacity:    0;
+						transition: all $speed $easing;
+					}
+				}
 
-		&:disabled {
-			+ label:before {
-				background-color: $gray-light;
-				border-color:     $gray-light;
-				transform:        scale(1);
-			}
-		}
+				&:checked {
+					+ .cr {
+						background: $brand-primary;
+						color:      #fff;
 
-		&:checked {
-			&:disabled {
-				+ label:before {
-					transform:        scale(1);
-					background-color: lighten($brand-primary, 30%);
-					border-color:     lighten($brand-primary, 30%);
+						> .cr-icon {
+							transform: scale(1) rotateZ(0deg);
+							opacity:   1;
+						}
+					}
+				}
+
+				&:disabled {
+					+ .cr {
+						> .cr-icon {
+							opacity: .5;
+						}
+					}
 				}
 			}
 		}
-	}
-}
 
-.gfield_radio {
-	align-items:     flex-start;
-	display:         flex;
-	flex-flow:       row wrap;
-	justify-content: space-between;
-	list-style-type: none;
-	margin:          0;
-	padding:         0;
+		.cr {
+			border:        2px solid $brand-primary;
+			position:      relative;
+			display:       inline-block;
+			border-radius: $border-radius-small;
+			width:         $font-size-large;
+			height:        $font-size-large;
+			float:         left;
+			margin-right:  ceil(($line-height-computed / 2));
 
-	input[type=radio] {
-		display: none;
-
-		+ label {
-			background:      lighten($brand-primary, 50%);
-			border-radius:   $border-radius-small;
-			border:          1px solid $brand-primary;
-			color:           $brand-primary;
-			cursor:          pointer;
-			display:         block;
-			float:           none;
-			font-size:       $font-size-large;
-			font-weight:     400;
-			line-height:     1;
-			margin:          0;
-			max-width:       100%;
-			padding:         10px;
-			position:        relative;
-			text-align:      center;
-			text-decoration: none;
-			transition:      $speed $easing all;
-			width:           100%;
-		}
-
-		&:checked {
-			+ label {
-				background: $brand-primary;
-				color:      #fff;
+			.cr-icon {
+				position:    absolute;
+				font-size:   .8em;
+				line-height: 0;
+				top:         50%;
+				left:        20%;
 			}
 		}
 	}
+}
 
-	input[type=text],
-	input[type=number] {
-		background:      #fff !important;
-		border-radius:   $border-radius-small;
-		border:          1px solid $brand-primary !important;
-		color:           $brand-primary !important;
-		cursor:          pointer;
-		display:         block;
-		float:           none;
-		font-size:       $font-size-large !important;
-		font-weight:     400;
-		height:          44px !important;
-		line-height:     1;
-		margin:          0;
-		max-width:       100%;
-		padding:         10px;
-		position:        relative;
-		text-align:      center !important;
-		text-decoration: none;
-		transition:      $speed $easing all;
-		width:           100%;
+.gf_contribution_amount {
+	.ginput_container_radio {
+		.gfield_radio {
+			align-items:     flex-start;
+			display:         flex;
+			flex-flow:       row wrap;
+			justify-content: space-between;
+			list-style-type: none;
+			margin:          0;
+			padding:         0;
 
-		&:focus {
-			background: #fff !important;
-			color:      $brand-primary !important;
-		}
+			input[type=radio] {
+				display: none;
 
-		&::placeholder {
-			font-weight: 300 !important;
-		}
-	}
+				+ label {
+					background:      lighten($brand-primary, 50%);
+					border-radius:   $border-radius-small;
+					border:          1px solid $brand-primary;
+					color:           $brand-primary;
+					cursor:          pointer;
+					display:         block;
+					float:           none;
+					font-size:       $font-size-large;
+					font-weight:     400;
+					line-height:     1;
+					margin:          0;
+					max-width:       100%;
+					padding:         10px;
+					position:        relative;
+					text-align:      center;
+					text-decoration: none;
+					transition:      $speed $easing all;
+					width:           100%;
+				}
 
-	li {
-		margin-bottom: 0;
-		padding:       0 10px 10px 0;
-		width:         50%;
+				&:checked {
+					+ label {
+						background: $brand-primary;
+						color:      #fff;
+					}
+				}
+			}
 
-		&:nth-of-type(2n) {
-			padding: 0 0 0 10px;
+			input[type=text],
+			input[type=number] {
+				background:      #fff !important;
+				border-radius:   $border-radius-small;
+				border:          1px solid $brand-primary !important;
+				color:           $brand-primary !important;
+				cursor:          pointer;
+				display:         block;
+				float:           none;
+				font-size:       $font-size-large !important;
+				font-weight:     400;
+				height:          44px !important;
+				line-height:     1;
+				margin:          0;
+				max-width:       100%;
+				padding:         10px;
+				position:        relative;
+				text-align:      center !important;
+				text-decoration: none;
+				transition:      $speed $easing all;
+				width:           100%;
+
+				&:focus {
+					background: #fff !important;
+					color:      $brand-primary !important;
+				}
+
+				&::placeholder {
+					font-weight: 300 !important;
+				}
+			}
+
+			li {
+				margin-bottom: 0;
+				padding:       0 10px 10px 0;
+				width:         50%;
+
+				&:nth-of-type(2n) {
+					padding: 0 0 0 10px;
+				}
+			}
 		}
 	}
 }
@@ -228,6 +262,14 @@
 	}
 
 	.ginput_container_creditcard {
+
+		> span {
+			&:not(:last-of-type) {
+				margin-bottom: 15px !important;
+				margin-top:    15px !important;
+			}
+		}
+
 		.gform_card_icon_container {
 			display: none;
 		}
@@ -240,6 +282,45 @@
 		padding:   5px 10px;
 		margin:    5px 0 0;
 	}
+
+	.ginput_full.ginput_cardextras {
+		@extend .row;
+		display:    block !important;
+		margin-top: 15px;
+
+		.ginput_cardinfo_left {
+			@extend .col-xs-8;
+		}
+
+		.ginput_cardinfo_right {
+			@extend .col-xs-4;
+		}
+
+		.ginput_cardinfo_left {
+			.ginput_card_expiration_container {
+				@extend .row;
+				display:     block !important;
+				margin-left: 0;
+
+				label {
+					width: 100%;
+				}
+
+				select {
+					width: 45%;
+					float: left;
+
+					&:first-of-type {
+						margin-right: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+#input_2_54_5_label {
+	width: 100%;
 }
 
 .gform_validation_error {
@@ -259,64 +340,72 @@
 }
 
 @media #{$small} {
-	.gfield_radio {
-		input[type=radio] {
-			display: none;
+	.gf_contribution_amount {
+		.ginput_container_radio {
+			.gfield_radio {
+				input[type=radio] {
+					display: none;
 
-			+ label {
-				font-size: $font-size-base;
-			}
-		}
+					+ label {
+						font-size: $font-size-base;
+					}
+				}
 
-		input[type=text],
-		input[type=number] {
-			font-size:  $font-size-base !important;
-			height:     40px !important;
-			padding:    0 !important;
-			text-align: center !important;
-		}
+				input[type=text],
+				input[type=number] {
+					font-size:  $font-size-base !important;
+					height:     40px !important;
+					padding:    0 !important;
+					text-align: center !important;
+				}
 
-		li {
-			width: 25% !important;
+				li {
+					width: 25% !important;
 
-			&:nth-of-type(2n) {
-				padding: 0 10px 10px 0;
-			}
+					&:nth-of-type(2n) {
+						padding: 0 10px 10px 0;
+					}
 
-			&:nth-of-type(4n) {
-				padding: 0 0 10px 0;
+					&:nth-of-type(4n) {
+						padding: 0 0 10px 0;
+					}
+				}
 			}
 		}
 	}
 }
 
 @media #{$medium} {
-	.gfield_radio {
-		input[type=radio] {
-			display: none;
+	.gf_contribution_amount {
+		.ginput_container_radio {
+			.gfield_radio {
+				input[type=radio] {
+					display: none;
 
-			+ label {
-				font-size: $font-size-large;
-			}
-		}
+					+ label {
+						font-size: $font-size-large;
+					}
+				}
 
-		input[type=text],
-		input[type=number] {
-			font-size:  $font-size-large !important;
-			height:     44px !important;
-			padding:    10px !important;
-			text-align: center !important;
-		}
+				input[type=text],
+				input[type=number] {
+					font-size:  $font-size-large !important;
+					height:     44px !important;
+					padding:    10px !important;
+					text-align: center !important;
+				}
 
-		li {
-			width: 25% !important;
+				li {
+					width: 25% !important;
 
-			&:nth-of-type(2n) {
-				padding: 0 10px 10px 0;
-			}
+					&:nth-of-type(2n) {
+						padding: 0 10px 10px 0;
+					}
 
-			&:nth-of-type(4n) {
-				padding: 0 0 10px 0;
+					&:nth-of-type(4n) {
+						padding: 0 0 10px 0;
+					}
+				}
 			}
 		}
 	}

@@ -1,6 +1,60 @@
 footer:not([class]) {
-	background: $brand-primary;
+	background: $gray-lighter;
 	border-top: 1px darken($brand-primary, 15%);
 	padding:    ceil(($line-height-computed)) 0 0;
 	margin:     ceil(($line-height-computed)) 0 0;
+
+	.brand-col {
+		ul.social-nav {
+			margin:          0;
+			padding:         0;
+			list-style-type: none;
+			display:         flex;
+			flex-flow:       row wrap;
+			justify-content: space-around;
+
+			li {
+				a {
+					color:      $text-color;
+					font-size:  $font-size-h2;
+					transition: all $speed $easing;
+
+					&[href*="facebook"] {
+						&:active,
+						&:focus,
+						&:hover {
+							color: #3b5998;
+						}
+					}
+
+					&[href*="twitter"] {
+						&:active,
+						&:focus,
+						&:hover {
+							color: #1da1f2;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.nav-col {
+		ul.footer-nav {
+			margin:          0;
+			padding:         0;
+			list-style-type: none;
+			display:         flex;
+			flex-flow:       row wrap;
+			justify-content: space-between;
+		}
+	}
+
+	.bottom-wrapper {
+		background: $text-color;
+		color:      $gray-lighter;
+		font-size:  ceil(($font-size-base * 0.8));
+		padding:    $line-height-computed 0 ceil(($line-height-computed / 2));
+		margin:     $line-height-computed 0 0;
+	}
 }

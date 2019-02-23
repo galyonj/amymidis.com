@@ -52,6 +52,16 @@ add_filter( 'media_send_to_editor', 'restore_image_title', 15, 2 );
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
+// Add the page slug to body_class();
+function add_slug_body_class( $classes ) {
+	global $post;
+	if ( isset( $post ) ) {
+		$classes[] = $post->post_type . '-' . $post->post_name;
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'add_slug_body_class' );
+
 // To output these custom settings fields in theme files, simply echo the
 // field ID that is set in add_settings_field.
 // ex `echo get_option( 'my_custom_field_id' );

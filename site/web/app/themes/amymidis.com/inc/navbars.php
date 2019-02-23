@@ -11,7 +11,7 @@ function nav_menus() {
 	$locations = array(
 		'footer-nav' => 'Footer Navigation',
 		'main-nav'   => 'Main Navigation',
-		//'social-nav' => 'Social Navigation',
+		'social-nav' => 'Social Navigation',
 	);
 
 	register_nav_menus( $locations );

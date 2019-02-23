@@ -22,13 +22,16 @@ var scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 (function () {
-  var otherText = $('#input_1_13_other');
   $(document).ready(function () {
+    $('.gchoice_3_13_7').prepend('<label for="other_donation_amount" id="label_3_13_other" class="sr-only">Enter your own amount</label>');
     $('.scroll-top').hide();
+    $('.employer_field, .occupation_field').find('label').append('<span class="gfield_required">*</span>');
+    $('.employer_field input, .occupation_field input').attr('required', 'required');
+    $('#input_3_13_other').attr('name', 'other_donation_amount');
     $(window).scroll(function showScrollButton() {
       if (100 < $(this).scrollTop()) {
         // if the window's position is greater than 100 pixels away from the top
-        // of the page, fade the scroll button in
+        // of the page, fade the scroll button ins
         $('.scroll-top').fadeIn();
       } else {
         // if not, fade the button so it's out of the way
@@ -36,13 +39,7 @@ var scroll = new SmoothScroll('a[href*="#"]', {
       }
     });
     $('.ginput_card_security_code_icon').remove();
-    otherText.inputmask({
-      alias: 'currency',
-      allowMinus: false,
-      clearMaskOnLostFocus: false,
-      digits: 2,
-      prefix: '$'
-    }).attr('pattern', '[0-9]*');
+    $('#choice_3_60_1').prependTo($('#label_3_60_1')).prepend('<span class="cr"><i class="cr-icon fas fa-check"></i></span>');
   }); // This function pushes the footer down
   // on pages that have short content
 
@@ -61,8 +58,25 @@ var scroll = new SmoothScroll('a[href*="#"]', {
       }
     }
   });
-  otherText.on('change', function () {
-    $('#input_1_43').text(otherText.val());
-    $('#ginput_base_price_1_43').val(otherText.val());
+  $('#input_3_13_other').focus(function () {
+    $('#input_3_13_other').inputmask({
+      alias: 'currency',
+      allowMinus: false,
+      clearMaskOnLostFocus: false,
+      digits: 2,
+      prefix: '$'
+    });
+  }).change(function () {
+    var otherVal = $(this).val();
+    $('#choice_3_13_7').val(otherVal);
+    $('#input_3_69').html(otherVal);
+    $('#ginput_base_price_3_69').val(otherVal);
+  });
+  $('#choice_3_60_1').click(function () {
+    if ($(this).is(':checked')) {
+      $('.employer_field, .occupation_field').hide().find('input').attr('disabled', 'disabled');
+    } else {
+      $('.employer_field, .occupation_field').show().find('input').removeAttr('disabled');
+    }
   });
 })(jQuery);

@@ -35,7 +35,8 @@
 	</script>
 	<!-- End Google Tag Manager -->
 </head>
-<body data-scroll-id="page-top" id="page-top">
+<?php $img = get_field('page_background'); $imgUrl = esc_url( $img['url'] ); ?>
+<body data-scroll-id="page-top" id="page-top" style="background-image: url(<?php echo $imgUrl; ?>);" <?php body_class(); ?>>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8925PJ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -48,7 +49,7 @@
 </a>
 <div class="wrapper">
 	<header role="banner">
-		<?php get_template_part( 'views/header', 'navbar'); ?>
+		<?php if( ! is_front_page() ) : get_template_part( 'view/header', 'navbar'); endif; ?>
 	</header>
 	<div class="content-wrapper">
 

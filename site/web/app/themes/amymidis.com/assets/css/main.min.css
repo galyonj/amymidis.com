@@ -320,17 +320,17 @@ hr{margin-top:25px;margin-bottom:25px;border:0;border-top:1px solid #eee}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 .sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}
 [role="button"]{cursor:pointer}
-h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:inherit;font-weight:700;line-height:1.1;color:inherit}
-h1 small,h1 .small,h2 small,h2 .small,h3 small,h3 .small,h4 small,h4 .small,h5 small,h5 .small,h6 small,h6 .small,.h1 small,.h1 .small,.h2 small,.h2 .small,.h3 small,.h3 .small,.h4 small,.h4 .small,.h5 small,.h5 .small,.h6 small,.h6 .small{font-weight:400;line-height:1;color:#777}
+h1,h2,h3,h4,.gform_fields .gfield.gf_contribution_total .ginput_product_price,h5,.gform_fields .gfield.gf_contribution_total .gfield_label,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:inherit;font-weight:700;line-height:1.1;color:inherit}
+h1 small,h1 .small,h2 small,h2 .small,h3 small,h3 .small,h4 small,.gform_fields .gfield.gf_contribution_total .ginput_product_price small,h4 .small,.gform_fields .gfield.gf_contribution_total .ginput_product_price .small,h5 small,.gform_fields .gfield.gf_contribution_total .gfield_label small,h5 .small,.gform_fields .gfield.gf_contribution_total .gfield_label .small,h6 small,h6 .small,.h1 small,.h1 .small,.h2 small,.h2 .small,.h3 small,.h3 .small,.h4 small,.h4 .small,.h5 small,.h5 .small,.h6 small,.h6 .small{font-weight:400;line-height:1;color:#777}
 h1,.h1,h2,.h2,h3,.h3{margin-top:25px;margin-bottom:12.5px}
 h1 small,h1 .small,.h1 small,.h1 .small,h2 small,h2 .small,.h2 small,.h2 .small,h3 small,h3 .small,.h3 small,.h3 .small{font-size:65%}
-h4,.h4,h5,.h5,h6,.h6{margin-top:12.5px;margin-bottom:12.5px}
-h4 small,h4 .small,.h4 small,.h4 .small,h5 small,h5 .small,.h5 small,.h5 .small,h6 small,h6 .small,.h6 small,.h6 .small{font-size:75%}
+h4,.gform_fields .gfield.gf_contribution_total .ginput_product_price,.h4,h5,.gform_fields .gfield.gf_contribution_total .gfield_label,.h5,h6,.h6{margin-top:12.5px;margin-bottom:12.5px}
+h4 small,.gform_fields .gfield.gf_contribution_total .ginput_product_price small,h4 .small,.gform_fields .gfield.gf_contribution_total .ginput_product_price .small,.h4 small,.h4 .small,h5 small,.gform_fields .gfield.gf_contribution_total .gfield_label small,h5 .small,.gform_fields .gfield.gf_contribution_total .gfield_label .small,.h5 small,.h5 .small,h6 small,h6 .small,.h6 small,.h6 .small{font-size:75%}
 h1,.h1{font-size:37px}
 h2,.h2{font-size:31px}
 h3,.h3{font-size:26px}
-h4,.h4{font-size:22px}
-h5,.h5{font-size:18px}
+h4,.gform_fields .gfield.gf_contribution_total .ginput_product_price,.h4{font-size:22px}
+h5,.gform_fields .gfield.gf_contribution_total .gfield_label,.h5{font-size:18px}
 h6,.h6{font-size:15px}
 p{margin:0 0 12.5px}
 .lead{margin-bottom:25px;font-size:20px;font-weight:300;line-height:1.4}
@@ -401,21 +401,21 @@ pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;backgrou
 .container-fluid{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
 .container-fluid:before,.container-fluid:after{display:table;content:" "}
 .container-fluid:after{clear:both}
-.row,.gform_fields{margin-right:-15px;margin-left:-15px}
-.row:before,.gform_fields:before,.row:after,.gform_fields:after{display:table;content:" "}
-.row:after,.gform_fields:after{clear:both}
+.row,.gform_fields,.gf_credit_card .ginput_full.ginput_cardextras,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .ginput_card_expiration_container{margin-right:-15px;margin-left:-15px}
+.row:before,.gform_fields:before,.gf_credit_card .ginput_full.ginput_cardextras:before,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .ginput_card_expiration_container:before,.row:after,.gform_fields:after,.gf_credit_card .ginput_full.ginput_cardextras:after,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .ginput_card_expiration_container:after{display:table;content:" "}
+.row:after,.gform_fields:after,.gf_credit_card .ginput_full.ginput_cardextras:after,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .ginput_card_expiration_container:after{clear:both}
 .row-no-gutters{margin-right:0;margin-left:0}
 .row-no-gutters [class*="col-"]{padding-right:0;padding-left:0}
-.col-xs-1,.col-sm-1,.col-md-1,.col-lg-1,.col-xs-2,.col-sm-2,.gform_fields .gfield.gf_credit_card_expiry,.gform_fields .gfield.gf_credit_card_security,.col-md-2,.col-lg-2,.col-xs-3,.gform_fields .gfield.gf_quarter,.gform_fields .gfield.gf_three_col,.gform_fields .gfield.gf_credit_card_expiry,.gform_fields .gfield.gf_credit_card_security,.col-sm-3,.col-md-3,.col-lg-3,.col-xs-4,.col-sm-4,.gform_fields .gfield.gf_credit_card_number,.gform_fields .gfield.gf_credit_card_holder,.col-md-4,.col-lg-4,.col-xs-5,.col-sm-5,.col-md-5,.col-lg-5,.col-xs-6,.gform_fields .gfield.gf_half,.gform_fields .gfield.gf_credit_card_number,.col-sm-6,.col-md-6,.col-lg-6,.col-xs-7,.col-sm-7,.col-md-7,.col-lg-7,.col-xs-8,.col-sm-8,.col-md-8,.col-lg-8,.col-xs-9,.col-sm-9,.col-md-9,.col-lg-9,.col-xs-10,.col-sm-10,.col-md-10,.col-lg-10,.col-xs-11,.col-sm-11,.col-md-11,.col-lg-11,.col-xs-12,.gform_fields .gfield,.gform_fields .gfield.gf_credit_card_holder,.col-sm-12,.col-md-12,.col-lg-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px}
-.col-xs-1,.col-xs-2,.col-xs-3,.gform_fields .gfield.gf_quarter,.gform_fields .gfield.gf_three_col,.gform_fields .gfield.gf_credit_card_expiry,.gform_fields .gfield.gf_credit_card_security,.col-xs-4,.col-xs-5,.col-xs-6,.gform_fields .gfield.gf_half,.gform_fields .gfield.gf_credit_card_number,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12,.gform_fields .gfield,.gform_fields .gfield.gf_credit_card_holder{float:left}
+.col-xs-1,.col-sm-1,.col-md-1,.col-lg-1,.col-xs-2,.col-sm-2,.gform_fields .gfield.gf_credit_card_expiry,.gform_fields .gfield.gf_credit_card_security,.col-md-2,.col-lg-2,.col-xs-3,.gform_fields .gfield.gf_quarter,.gform_fields .gfield.gf_three_col,.gform_fields .gfield.gf_credit_card_expiry,.gform_fields .gfield.gf_credit_card_security,.col-sm-3,.col-md-3,.col-lg-3,.col-xs-4,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_right,.col-sm-4,.gform_fields .gfield.gf_credit_card_number,.gform_fields .gfield.gf_credit_card_holder,.col-md-4,.col-lg-4,.col-xs-5,.col-sm-5,.col-md-5,.col-lg-5,.col-xs-6,.gform_fields .gfield.gf_half,.gform_fields .gfield.gf_credit_card_number,.col-sm-6,.col-md-6,.col-lg-6,.col-xs-7,.col-sm-7,.col-md-7,.col-lg-7,.col-xs-8,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left,.col-sm-8,.col-md-8,.col-lg-8,.col-xs-9,.col-sm-9,.col-md-9,.col-lg-9,.col-xs-10,.col-sm-10,.col-md-10,.col-lg-10,.col-xs-11,.col-sm-11,.col-md-11,.col-lg-11,.col-xs-12,.gform_fields .gfield,.gform_fields .gfield.gf_credit_card_holder,.col-sm-12,.col-md-12,.col-lg-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px}
+.col-xs-1,.col-xs-2,.col-xs-3,.gform_fields .gfield.gf_quarter,.gform_fields .gfield.gf_three_col,.gform_fields .gfield.gf_credit_card_expiry,.gform_fields .gfield.gf_credit_card_security,.col-xs-4,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_right,.col-xs-5,.col-xs-6,.gform_fields .gfield.gf_half,.gform_fields .gfield.gf_credit_card_number,.col-xs-7,.col-xs-8,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12,.gform_fields .gfield,.gform_fields .gfield.gf_credit_card_holder{float:left}
 .col-xs-1{width:8.3333333333%}
 .col-xs-2{width:16.6666666667%}
 .col-xs-3,.gform_fields .gfield.gf_quarter,.gform_fields .gfield.gf_three_col,.gform_fields .gfield.gf_credit_card_expiry,.gform_fields .gfield.gf_credit_card_security{width:25%}
-.col-xs-4{width:33.3333333333%}
+.col-xs-4,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_right{width:33.3333333333%}
 .col-xs-5{width:41.6666666667%}
 .col-xs-6,.gform_fields .gfield.gf_half,.gform_fields .gfield.gf_credit_card_number{width:50%}
 .col-xs-7{width:58.3333333333%}
-.col-xs-8{width:66.6666666667%}
+.col-xs-8,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left{width:66.6666666667%}
 .col-xs-9{width:75%}
 .col-xs-10{width:83.3333333333%}
 .col-xs-11{width:91.6666666667%}
@@ -871,7 +871,7 @@ a.badge:hover,a.badge:focus{color:#fff;text-decoration:none;cursor:pointer}
 .thumbnail .caption{padding:9px;color:#333}
 a.thumbnail:hover,a.thumbnail:focus,a.thumbnail.active{border-color:#427730}
 .alert,.gf_credit_card .gfield_creditcard_warning_message,.gform_validation_error .gfield_error .validation_message{padding:15px;margin-bottom:25px;border:1px solid transparent;border-radius:4px}
-.alert h4,.gf_credit_card .gfield_creditcard_warning_message h4,.gform_validation_error .gfield_error .validation_message h4{margin-top:0;color:inherit}
+.alert h4,.gf_credit_card .gfield_creditcard_warning_message h4,.gform_validation_error .gfield_error .validation_message h4,.alert .gform_fields .gfield.gf_contribution_total .ginput_product_price,.gform_fields .gfield.gf_contribution_total .alert .ginput_product_price,.gf_credit_card .gfield_creditcard_warning_message .gform_fields .gfield.gf_contribution_total .ginput_product_price,.gform_fields .gfield.gf_contribution_total .gf_credit_card .gfield_creditcard_warning_message .ginput_product_price,.gform_validation_error .gfield_error .validation_message .gform_fields .gfield.gf_contribution_total .ginput_product_price,.gform_fields .gfield.gf_contribution_total .gform_validation_error .gfield_error .validation_message .ginput_product_price{margin-top:0;color:inherit}
 .alert .alert-link,.gf_credit_card .gfield_creditcard_warning_message .alert-link,.gform_validation_error .gfield_error .validation_message .alert-link{font-weight:bold}
 .alert>p,.gf_credit_card .gfield_creditcard_warning_message>p,.gform_validation_error .gfield_error .validation_message>p,.alert>ul,.gf_credit_card .gfield_creditcard_warning_message>ul,.gform_validation_error .gfield_error .validation_message>ul{margin-bottom:0}
 .alert>p+p,.gf_credit_card .gfield_creditcard_warning_message>p+p,.gform_validation_error .gfield_error .validation_message>p+p{margin-top:5px}
@@ -1137,15 +1137,21 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 .visible-print-block{display:none !important}
 .visible-print-inline{display:none !important}
 .visible-print-inline-block{display:none !important}
-.scroll-top{position:fixed;bottom:15px;right:15px;color:#fff;border-radius:100%;border:1px solid #fff;background-color:#60ae46;font-size:22px;padding:5px 11px 4px;z-index:1000;-webkit-transition:all 400ms ease-in-out;transition:all 400ms ease-in-out}
+.scroll-top{position:fixed;bottom:15px;right:15px;color:#fff;border-radius:100%;border:1px solid #fff;background-color:#60ae46;font-size:22px;padding:3px 10px 4px;z-index:1000;-webkit-transition:all 400ms ease-in-out;transition:all 400ms ease-in-out}
 .scroll-top:active,.scroll-top:focus,.scroll-top:hover{background-color:#427730;color:#fff}
+body{background-attachment:fixed;background-size:cover;background-repeat:no-repeat}
+body.page-contribute .container{margin:50px auto;background:rgba(255,255,255,0.85);-webkit-box-shadow:1px 5px 5px 0 rgba(0,0,0,0.42);box-shadow:1px 5px 5px 0 rgba(0,0,0,0.42)}
+body.page-contribute .container .row.content-row,body.page-contribute .container .content-row.gform_fields,body.page-contribute .container .gf_credit_card .content-row.ginput_full.ginput_cardextras,.gf_credit_card body.page-contribute .container .content-row.ginput_full.ginput_cardextras,body.page-contribute .container .gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .content-row.ginput_card_expiration_container,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left body.page-contribute .container .content-row.ginput_card_expiration_container{padding:0 0 30px}
 .breadcrumb{background:0;list-style-type:none;margin:0;padding:21px 0 21px}
 .breadcrumb>li{font-size:15px;font-weight:300}
 .breadcrumb>li a{font-weight:500}
-.breadcrumb>li+li:before{content:"\003E"}
-h1,h2,h3,h4,h5,h6{color:#427730;font-weight:600}
+.breadcrumb>li+li:before{content:"/"}
+h1,h2,h3,h4,.gform_fields .gfield.gf_contribution_total .ginput_product_price,h5,.gform_fields .gfield.gf_contribution_total .gfield_label,h6{color:#427730;font-weight:600}
 p{font-weight:300}
 p a{font-weight:600}
+.gform_fields .gfield.gfield_visibility_hidden,.gform_fields .gfield .ginput_product_price_label{display:none !important}
+.gform_fields .gfield.gf_contribution_total .gfield_label{margin:0}
+.gform_fields .gfield.gf_contribution_total .ginput_container_product_calculation{margin-top:15px}
 .gform_fields .gfield.hidden_label label.gfield_label{display:none}
 .gform_fields .gfield label{font-size:15px;font-weight:300;margin-bottom:0}
 .gform_fields .gfield label>.gfield_required{color:#981e32}
@@ -1155,32 +1161,48 @@ p a{font-weight:600}
 .gform_fields .gfield input:not([type="radio"]):not([type="checkbox"])::-ms-input-placeholder,.gform_fields .gfield select::-ms-input-placeholder,.gform_fields .gfield textarea::-ms-input-placeholder{font-weight:300 !important}
 .gform_fields .gfield input:not([type="radio"]):not([type="checkbox"])::placeholder,.gform_fields .gfield select::placeholder,.gform_fields .gfield textarea::placeholder{font-weight:300 !important}
 .gform_fields .gfield.gsection h2{margin:13px 0 0;border-bottom:1px solid #427730}
-.gfield_checkbox{margin:0;padding:0;list-style-type:none}
-.gfield_checkbox input[type=checkbox]{display:none}
-.gfield_checkbox input[type=checkbox]+label{cursor:pointer;display:block;font-size:17px;margin-left:35px;padding:0}
-.gfield_checkbox input[type=checkbox]+label:active:before{-webkit-transform:scale(0);transform:scale(0)}
-.gfield_checkbox input[type=checkbox]+label:before{content:"\2713";border:2px solid #333;border-radius:3px;display:inline-block;width:25px;height:25px;padding-left:4px;padding-bottom:5px;margin-right:10px;margin-left:-35px;vertical-align:middle;color:transparent;-webkit-transition:.2s;transition:.2s}
-.gfield_checkbox input[type=checkbox]:checked+label:before{background-color:#427730;border-color:#427730;color:#fff}
-.gfield_checkbox input[type=checkbox]:disabled+label:before{background-color:#777;border-color:#777;-webkit-transform:scale(1);transform:scale(1)}
-.gfield_checkbox input[type=checkbox]:checked:disabled+label:before{-webkit-transform:scale(1);transform:scale(1);background-color:#8cc878;border-color:#8cc878}
-.gfield_radio{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;list-style-type:none;margin:0;padding:0}
-.gfield_radio input[type=radio]{display:none}
-.gfield_radio input[type=radio]+label{background:#cae6c0;border-radius:3px;border:1px solid #427730;color:#427730;cursor:pointer;display:block;float:none;font-size:22px;font-weight:400;line-height:1;margin:0;max-width:100%;padding:10px;position:relative;text-align:center;text-decoration:none;-webkit-transition:400ms ease-in-out all;transition:400ms ease-in-out all;width:100%}
-.gfield_radio input[type=radio]:checked+label{background:#427730;color:#fff}
-.gfield_radio input[type=text],.gfield_radio input[type=number]{background:#fff !important;border-radius:3px;border:1px solid #427730 !important;color:#427730 !important;cursor:pointer;display:block;float:none;font-size:22px !important;font-weight:400;height:44px !important;line-height:1;margin:0;max-width:100%;padding:10px;position:relative;text-align:center !important;text-decoration:none;-webkit-transition:400ms ease-in-out all;transition:400ms ease-in-out all;width:100%}
-.gfield_radio input[type=text]:focus,.gfield_radio input[type=number]:focus{background:#fff !important;color:#427730 !important}
-.gfield_radio input[type=text]::-webkit-input-placeholder,.gfield_radio input[type=number]::-webkit-input-placeholder{font-weight:300 !important}
-.gfield_radio input[type=text]:-ms-input-placeholder,.gfield_radio input[type=number]:-ms-input-placeholder{font-weight:300 !important}
-.gfield_radio input[type=text]::-ms-input-placeholder,.gfield_radio input[type=number]::-ms-input-placeholder{font-weight:300 !important}
-.gfield_radio input[type=text]::placeholder,.gfield_radio input[type=number]::placeholder{font-weight:300 !important}
-.gfield_radio li{margin-bottom:0;padding:0 10px 10px 0;width:50%}
-.gfield_radio li:nth-of-type(2n){padding:0 0 0 10px}
+.gfield_html p{margin-bottom:0}
+.gform_button{margin-bottom:15px}
+.gf_employment_status_check .gfield_checkbox{margin:0;padding:0;list-style-type:none}
+.gf_employment_status_check .gfield_checkbox label:after{clear:both;content:'';display:table}
+.gf_employment_status_check .gfield_checkbox label input[type="checkbox"]{display:none}
+.gf_employment_status_check .gfield_checkbox label input[type="checkbox"]+.cr>.cr-icon{-webkit-transform:scale(3) rotateZ(-20deg);transform:scale(3) rotateZ(-20deg);opacity:0;-webkit-transition:all 400ms ease-in-out;transition:all 400ms ease-in-out}
+.gf_employment_status_check .gfield_checkbox label input[type="checkbox"]:checked+.cr{background:#427730;color:#fff}
+.gf_employment_status_check .gfield_checkbox label input[type="checkbox"]:checked+.cr>.cr-icon{-webkit-transform:scale(1) rotateZ(0);transform:scale(1) rotateZ(0);opacity:1}
+.gf_employment_status_check .gfield_checkbox label input[type="checkbox"]:disabled+.cr>.cr-icon{opacity:.5}
+.gf_employment_status_check .gfield_checkbox .cr{border:2px solid #427730;position:relative;display:inline-block;border-radius:3px;width:22px;height:22px;float:left;margin-right:13px}
+.gf_employment_status_check .gfield_checkbox .cr .cr-icon{position:absolute;font-size:.8em;line-height:0;top:50%;left:20%}
+.gf_contribution_amount .ginput_container_radio .gfield_radio{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;list-style-type:none;margin:0;padding:0}
+.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=radio]{display:none}
+.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=radio]+label{background:#cae6c0;border-radius:3px;border:1px solid #427730;color:#427730;cursor:pointer;display:block;float:none;font-size:22px;font-weight:400;line-height:1;margin:0;max-width:100%;padding:10px;position:relative;text-align:center;text-decoration:none;-webkit-transition:400ms ease-in-out all;transition:400ms ease-in-out all;width:100%}
+.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=radio]:checked+label{background:#427730;color:#fff}
+.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=text],.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=number]{background:#fff !important;border-radius:3px;border:1px solid #427730 !important;color:#427730 !important;cursor:pointer;display:block;float:none;font-size:22px !important;font-weight:400;height:44px !important;line-height:1;margin:0;max-width:100%;padding:10px;position:relative;text-align:center !important;text-decoration:none;-webkit-transition:400ms ease-in-out all;transition:400ms ease-in-out all;width:100%}
+.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=text]:focus,.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=number]:focus{background:#fff !important;color:#427730 !important}
+.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=text]::-webkit-input-placeholder,.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=number]::-webkit-input-placeholder{font-weight:300 !important}
+.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=text]:-ms-input-placeholder,.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=number]:-ms-input-placeholder{font-weight:300 !important}
+.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=text]::-ms-input-placeholder,.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=number]::-ms-input-placeholder{font-weight:300 !important}
+.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=text]::placeholder,.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=number]::placeholder{font-weight:300 !important}
+.gf_contribution_amount .ginput_container_radio .gfield_radio li{margin-bottom:0;padding:0 10px 10px 0;width:50%}
+.gf_contribution_amount .ginput_container_radio .gfield_radio li:nth-of-type(2n){padding:0 0 0 10px}
 .gf_credit_card label.gfield_label{display:none}
+.gf_credit_card .ginput_container_creditcard>span:not(:last-of-type){margin-bottom:15px !important;margin-top:15px !important}
 .gf_credit_card .ginput_container_creditcard .gform_card_icon_container{display:none}
 .gf_credit_card .gfield_creditcard_warning_message{font-size:15px;padding:5px 10px;margin:5px 0 0}
+.gf_credit_card .ginput_full.ginput_cardextras{display:block !important;margin-top:15px}
+.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .ginput_card_expiration_container{display:block !important;margin-left:0}
+.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .ginput_card_expiration_container label{width:100%}
+.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .ginput_card_expiration_container select{width:45%;float:left}
+.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .ginput_card_expiration_container select:first-of-type{margin-right:20px}
+#input_2_54_5_label{width:100%}
 .gform_validation_error .gfield_error .validation_message{font-size:15px;padding:5px 10px;margin:5px 0 0}
 .gform_validation_error .gfield_error input,.gform_validation_error .gfield_error select,.gform_validation_error .gfield_error textarea{border:1px solid #981e32 !important}
-footer:not([class]){background:#427730;border-top:1px #24401a;padding:25px 0 0;margin:25px 0 0}
+footer:not([class]){background:#eee;border-top:1px #24401a;padding:25px 0 0;margin:25px 0 0}
+footer:not([class]) .brand-col ul.social-nav{margin:0;padding:0;list-style-type:none;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-ms-flex-pack:distribute;justify-content:space-around}
+footer:not([class]) .brand-col ul.social-nav li a{color:#333;font-size:31px;-webkit-transition:all 400ms ease-in-out;transition:all 400ms ease-in-out}
+footer:not([class]) .brand-col ul.social-nav li a[href*="facebook"]:active,footer:not([class]) .brand-col ul.social-nav li a[href*="facebook"]:focus,footer:not([class]) .brand-col ul.social-nav li a[href*="facebook"]:hover{color:#3b5998}
+footer:not([class]) .brand-col ul.social-nav li a[href*="twitter"]:active,footer:not([class]) .brand-col ul.social-nav li a[href*="twitter"]:focus,footer:not([class]) .brand-col ul.social-nav li a[href*="twitter"]:hover{color:#1da1f2}
+footer:not([class]) .nav-col ul.footer-nav{margin:0;padding:0;list-style-type:none;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+footer:not([class]) .bottom-wrapper{background:#333;color:#eee;font-size:15px;padding:25px 0 13px;margin:25px 0 0}
 @media screen and (-webkit-min-device-pixel-ratio:0){input[type="date"].form-control,.gform_fields .gfield input[type="date"]:not([type="radio"]):not([type="checkbox"]),input[type="time"].form-control,.gform_fields .gfield input[type="time"]:not([type="radio"]):not([type="checkbox"]),input[type="datetime-local"].form-control,.gform_fields .gfield input[type="datetime-local"]:not([type="radio"]):not([type="checkbox"]),input[type="month"].form-control,.gform_fields .gfield input[type="month"]:not([type="radio"]):not([type="checkbox"]){line-height:39px}
 input[type="date"].input-sm,.input-group-sm>input.form-control[type="date"],.gform_fields .gfield .input-group-sm>input[type="date"]:not([type="radio"]):not([type="checkbox"]),.input-group-sm>input.input-group-addon[type="date"],.input-group-sm>.input-group-btn>input.btn[type="date"],.input-group-sm>.input-group-btn>input.gform_button[type="date"],.input-group-sm input[type="date"],input[type="time"].input-sm,.input-group-sm>input.form-control[type="time"],.gform_fields .gfield .input-group-sm>input[type="time"]:not([type="radio"]):not([type="checkbox"]),.input-group-sm>input.input-group-addon[type="time"],.input-group-sm>.input-group-btn>input.btn[type="time"],.input-group-sm>.input-group-btn>input.gform_button[type="time"],.input-group-sm input[type="time"],input[type="datetime-local"].input-sm,.input-group-sm>input.form-control[type="datetime-local"],.gform_fields .gfield .input-group-sm>input[type="datetime-local"]:not([type="radio"]):not([type="checkbox"]),.input-group-sm>input.input-group-addon[type="datetime-local"],.input-group-sm>.input-group-btn>input.btn[type="datetime-local"],.input-group-sm>.input-group-btn>input.gform_button[type="datetime-local"],.input-group-sm input[type="datetime-local"],input[type="month"].input-sm,.input-group-sm>input.form-control[type="month"],.gform_fields .gfield .input-group-sm>input[type="month"]:not([type="radio"]):not([type="checkbox"]),.input-group-sm>input.input-group-addon[type="month"],.input-group-sm>.input-group-btn>input.btn[type="month"],.input-group-sm>.input-group-btn>input.gform_button[type="month"],.input-group-sm input[type="month"]{line-height:34px}
 input[type="date"].input-lg,.input-group-lg>input.form-control[type="date"],.gform_fields .gfield .input-group-lg>input[type="date"]:not([type="radio"]):not([type="checkbox"]),.input-group-lg>input.input-group-addon[type="date"],.input-group-lg>.input-group-btn>input.btn[type="date"],.input-group-lg>.input-group-btn>input.gform_button[type="date"],.input-group-lg input[type="date"],input[type="time"].input-lg,.input-group-lg>input.form-control[type="time"],.gform_fields .gfield .input-group-lg>input[type="time"]:not([type="radio"]):not([type="checkbox"]),.input-group-lg>input.input-group-addon[type="time"],.input-group-lg>.input-group-btn>input.btn[type="time"],.input-group-lg>.input-group-btn>input.gform_button[type="time"],.input-group-lg input[type="time"],input[type="datetime-local"].input-lg,.input-group-lg>input.form-control[type="datetime-local"],.gform_fields .gfield .input-group-lg>input[type="datetime-local"]:not([type="radio"]):not([type="checkbox"]),.input-group-lg>input.input-group-addon[type="datetime-local"],.input-group-lg>.input-group-btn>input.btn[type="datetime-local"],.input-group-lg>.input-group-btn>input.gform_button[type="datetime-local"],.input-group-lg input[type="datetime-local"],input[type="month"].input-lg,.input-group-lg>input.form-control[type="month"],.gform_fields .gfield .input-group-lg>input[type="month"]:not([type="radio"]):not([type="checkbox"]),.input-group-lg>input.input-group-addon[type="month"],.input-group-lg>.input-group-btn>input.btn[type="month"],.input-group-lg>.input-group-btn>input.gform_button[type="month"],.input-group-lg input[type="month"]{line-height:52px}
@@ -1306,12 +1328,12 @@ input[type="date"].input-lg,.input-group-lg>input.form-control[type="date"],.gfo
 .carousel-control .glyphicon-chevron-right,.carousel-control .icon-next{margin-right:-10px}
 .carousel-caption{right:20%;left:20%;padding-bottom:30px}
 .carousel-indicators{bottom:20px}
-.gfield_radio input[type=radio]{display:none}
-.gfield_radio input[type=radio]+label{font-size:18px}
-.gfield_radio input[type=text],.gfield_radio input[type=number]{font-size:18px !important;height:40px !important;padding:0 !important;text-align:center !important}
-.gfield_radio li{width:25% !important}
-.gfield_radio li:nth-of-type(2n){padding:0 10px 10px 0}
-.gfield_radio li:nth-of-type(4n){padding:0 0 10px 0}
+.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=radio]{display:none}
+.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=radio]+label{font-size:18px}
+.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=text],.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=number]{font-size:18px !important;height:40px !important;padding:0 !important;text-align:center !important}
+.gf_contribution_amount .ginput_container_radio .gfield_radio li{width:25% !important}
+.gf_contribution_amount .ginput_container_radio .gfield_radio li:nth-of-type(2n){padding:0 10px 10px 0}
+.gf_contribution_amount .ginput_container_radio .gfield_radio li:nth-of-type(4n){padding:0 0 10px 0}
 }@media(min-width:768px) and (max-width:991px){.visible-sm{display:block !important}
 table.visible-sm{display:table !important}
 tr.visible-sm{display:table-row !important}
@@ -1382,12 +1404,12 @@ th.visible-md,td.visible-md{display:table-cell !important}
 .visible-md-inline{display:inline !important}
 .visible-md-inline-block{display:inline-block !important}
 .hidden-md{display:none !important}
-}@media screen and (min-width:992px){.gfield_radio input[type=radio]{display:none}
-.gfield_radio input[type=radio]+label{font-size:22px}
-.gfield_radio input[type=text],.gfield_radio input[type=number]{font-size:22px !important;height:44px !important;padding:10px !important;text-align:center !important}
-.gfield_radio li{width:25% !important}
-.gfield_radio li:nth-of-type(2n){padding:0 10px 10px 0}
-.gfield_radio li:nth-of-type(4n){padding:0 0 10px 0}
+}@media screen and (min-width:992px){.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=radio]{display:none}
+.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=radio]+label{font-size:22px}
+.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=text],.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=number]{font-size:22px !important;height:44px !important;padding:10px !important;text-align:center !important}
+.gf_contribution_amount .ginput_container_radio .gfield_radio li{width:25% !important}
+.gf_contribution_amount .ginput_container_radio .gfield_radio li:nth-of-type(2n){padding:0 10px 10px 0}
+.gf_contribution_amount .ginput_container_radio .gfield_radio li:nth-of-type(4n){padding:0 0 10px 0}
 }@media(min-width:1200px){.container{width:1170px}
 .col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12{float:left}
 .col-lg-1{width:8.3333333333%}

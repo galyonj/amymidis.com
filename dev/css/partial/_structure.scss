@@ -1,0 +1,17 @@
+body {
+	background-attachment: fixed;
+	background-size:       cover;
+	background-repeat:     no-repeat;
+
+	&.page-contribute {
+		.container {
+			margin:     50px auto;
+			background: rgba(255, 255, 255, 0.85);
+			box-shadow: 1px 5px 5px 0px rgba(0, 0, 0, 0.42);
+
+			.row.content-row {
+				padding: 0 0 30px;
+			}
+		}
+	}
+}

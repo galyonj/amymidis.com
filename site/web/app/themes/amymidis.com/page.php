@@ -13,7 +13,7 @@ if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
 		<?php get_template_part( 'view/content', 'header' ); ?>
 		<div class="row content-row">
 
-			<?php if( !is_page('contribute')) : ?>
+			<?php if( !is_front_page() ) : ?>
 				<article id="<?php the_ID(); ?>" <?php body_class( 'col-xs-12 col-md-8' ); ?>>
 			<?php else : ?>
 				<article id="<?php the_ID(); ?>" <?php body_class( 'col-xs-12 col-md-8 col-md-offset-2' ); ?>>
