@@ -2,18 +2,18 @@
 	background: none;
 	list-style-type: none;
 	margin: 0;
-	padding: ceil(( $line-height-computed / 1.2 )) 0 ceil(( $line-height-computed / 1.2 ));
+	padding: 0 0 ceil(( $line-height-computed / 1.2 ));
 
 	& > li {
 		font-size: $font-size-small;
 		font-weight: 300;
 
 		a {
-			font-weight: 500;
+			font-weight: 600;
 		}
 
 		& + li:before {
-			content: "/";
+			content: "\27E9";
 		}
 	}
 }

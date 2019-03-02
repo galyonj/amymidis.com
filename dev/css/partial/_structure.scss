@@ -1,17 +1,22 @@
-body {
-	background-attachment: fixed;
-	background-size:       cover;
-	background-repeat:     no-repeat;
+.link-wrapper {
+	background-color: $brand-primary;
+	padding: 30px 0;
+	margin-bottom: 30px;
+}
 
-	&.page-contribute {
-		.container {
-			margin:     50px auto;
-			background: rgba(255, 255, 255, 0.85);
-			box-shadow: 1px 5px 5px 0px rgba(0, 0, 0, 0.42);
+.triangle {
+	border-left:  10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top:   10px solid #fff;
+	height:       10px;
+	width:        10px;
+	left:         440px;
+	margin:       -29px auto 33px auto;
+}
 
-			.row.content-row {
-				padding: 0 0 30px;
-			}
-		}
+
+article {
+	:first-child {
+		margin-top: 0;
 	}
 }

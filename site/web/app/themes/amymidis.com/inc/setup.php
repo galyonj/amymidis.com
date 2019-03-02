@@ -56,10 +56,12 @@ remove_action( 'wp_print_styles', 'print_emoji_styles' );
 function add_slug_body_class( $classes ) {
 	global $post;
 	if ( isset( $post ) ) {
-		$classes[] = $post->post_type . '-' . $post->post_name;
+		$classes[] = $post -> post_type . '-' . $post -> post_name;
 	}
+
 	return $classes;
 }
+
 add_filter( 'body_class', 'add_slug_body_class' );
 
 // To output these custom settings fields in theme files, simply echo the
@@ -100,7 +102,29 @@ function google_tag_manager_id_callback( $args ) {
 
 add_filter( 'gform_field_container', 'add_bootstrap_container_class', 10, 6 );
 function add_bootstrap_container_class( $field_container, $field, $form, $css_class, $style, $field_content ) {
-	$id = $field->id;
+	$id       = $field -> id;
 	$field_id = is_admin() || empty( $form ) ? "field_{$id}" : 'field_' . $form['id'] . "_$id";
+
 	return '<li id="' . $field_id . '" class="' . $css_class . ' form-group">{FIELD_CONTENT}</li>';
+}
+
+/**
+ * Create custom merge tag for gravity forms
+ * to output the site name
+ */
+
+add_action( 'gform_admin_pre_render', 'add_merge_tags' );
+function add_merge_tags( $form ) {
+	?>
+	<script type="text/javascript">
+		gform.addFilter('gform_merge_tags', 'add_merge_tags');
+		function add_merge_tags(mergeTags, elementId, hideAllFields, excludeFieldTypes, isPrepop, option){
+			mergeTags["custom"].tags.push({ tag: '{site_name}', label: 'Site Name' });
+
+			return mergeTags;
+		}
+	</script>
+	<?php
+	//return the form object from the php hook
+	return $form;
 }

@@ -11,22 +11,22 @@
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
-			<button class="navbar-donate visible-xs" type="button">Contribute</button>
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="sr-only">toggle navigation menu</span>
-			</button>
 			<a href="<?php echo home_url(); ?>" class="navbar-brand">
 				<img src="<?php echo trailingslashit( get_stylesheet_directory_uri() ); ?>img/logo.svg"
-				     alt="<?php echo bloginfo( 'name' ); ?>" title="<?php echo bloginfo( 'name' ); ?>">
+				     alt="Logo for <?php echo bloginfo( 'name' ); ?>" title="<?php echo bloginfo( 'name' ); ?>">
 				<?php
 				if ( get_bloginfo( 'description' ) !== '' ) {
 					echo '<small class="sr-only">' . get_bloginfo( 'description' ) . '</small>';
 				}
 				?>
 			</a>
+			<div class="flex-margin"></div>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="sr-only">toggle navigation menu</span>
+			</button>
 		</div>
 		<div class="collapse navbar-collapse" id="navbar">
 			<ul class="nav navbar-nav navbar-right">
@@ -44,14 +44,31 @@
 
 				wp_nav_menu( $args );
 				?>
-				<li>
+				<li class="visible-xs">
 					<form action="<?php echo home_url( '/' ); ?>" class="navbar-form" role="search" method="get" id="searchform">
 						<div class="form-group">
-							<label for="search" class="sr-only">Search amymidis.com</label>
-							<input name="search" id="s" type="text" class="search-query form-control" autocomplete="on" placeholder="<?php _e
+							<label for="s" class="sr-only">Search <?php echo get_bloginfo( 'name' ); ?></label>
+							<input name="s" id="s" type="text" class="search-query form-control" autocomplete="on" placeholder="<?php _e
 							('Search',''); ?>">
 						</div>
 					</form>
+				</li>
+				<li class="hidden-xs dropdown">
+					<a href="#" title="Search" class="dropdown-toggle" data-toggle="dropdown"
+					   role="button" aria-expanded="false"><i class="fas fa-search"></i></a>
+					<ul class="dropdown-menu" role="menu" id="search-dropdown">
+						<li>
+							<form class="navbar-form" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+								<div class="input-group">
+									<label for="s" class="sr-only">Search <?php echo get_bloginfo( 'name' ); ?></label>
+									<input name="s" id="s" type="text" class="search-query form-control" autocomplete="on" placeholder="<?php _e('Search',''); ?>">
+									<span class="input-group-btn">
+									<button class="btn btn-primary" type="submit">Go</button>
+								</span>
+								</div>
+							</form>
+						</li>
+					</ul>
 				</li>
 			</ul>
 		</div>

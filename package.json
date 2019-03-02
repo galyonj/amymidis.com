@@ -40,6 +40,7 @@
     "gulp-uglifycss": "^1.0.6",
     "gulp-wp-pot": "^2.0.7",
     "inputmask": "^4.0.6",
+    "jarallax": "^1.10.7",
     "smooth-scroll": "^15.0.0"
   },
   "scripts": {

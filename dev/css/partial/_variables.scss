@@ -15,7 +15,8 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         #427730 !default; // until we've got some idea of what the official colors may be
+$brand-primary:         #3A5382 !default;
+$brand-red:				#db4949 !default;
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
@@ -43,31 +44,31 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
 $font-size-base:          18px !default;
-$font-size-large:         ceil(($font-size-base * 1.2)) !default; // ~21.6px
-$font-size-small:         ceil(($font-size-base * .833)) !default; // ~15px
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~22.50px
+$font-size-small:         ceil(($font-size-base * 0.8)) !default; // ~14.40px
 
-$font-size-h1:            floor(($font-size-base * 2.074)) !default; // ~37.32px
-$font-size-h2:            floor(($font-size-base * 1.728)) !default; // ~31.10px
-$font-size-h3:            ceil(($font-size-base * 1.44)) !default; // ~21.6px
-$font-size-h4:            ceil(($font-size-base * 1.2)) !default; // ~18px
-$font-size-h5:            $font-size-base !default;
-$font-size-h6:            ceil(($font-size-base * .833)) !default; // ~15px
+$font-size-h1:            floor(($font-size-base * 2.441)) !default; // ~43.95px
+$font-size-h2:            floor(($font-size-base * 1.953)) !default; // ~35.16px
+$font-size-h3:            ceil(($font-size-base * 1.563)) !default; // ~28.13px
+$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~22.50px
+$font-size-h5:            $font-size-base !default; // ~18px
+$font-size-h6:            ceil(($font-size-base * 0.8)) !default; // ~14.40px
 
 //** Unit-less `line-height` for use in components like buttons.
-$line-height-base:        1.44 !default; // 21.6/18
+$line-height-base:        1.5627777778 !default; // 28.13/18
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 //** By default, this inherits from the `<body>`.
-$headings-font-family:    inherit !default;
-$headings-font-weight:    700 !default;
+$headings-font-family:    "Roboto Slab" !default;
+$headings-font-weight:    400 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
 
@@ -147,7 +148,7 @@ $table-border-color:            #ddd !default;
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-font-weight:                normal !default;
+$btn-font-weight:                300 !default;
 
 $btn-default-color:              #333 !default;
 $btn-default-bg:                 #fff !default;

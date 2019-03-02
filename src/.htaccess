@@ -1,0 +1,18 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+
+# Redirecting non-primary domains
+RewriteCond %{HTTP_HOST} ^electamymidis.com\.com [NC,OR]
+RewriteCond %{HTTP_HOST} ^amymidas\.com [NC, OR]
+RewriteCond %{HTTP_HOST} ^midisforcitycouncil\.com [NC]
+RewriteRule ^(.*)$ https://amymidis\.com [L,R=301,NC]
+</IfModule>
+
+# END WordPress

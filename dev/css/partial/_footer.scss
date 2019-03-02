@@ -1,37 +1,116 @@
 footer:not([class]) {
-	background: $gray-lighter;
+	background: $brand-primary;
 	border-top: 1px darken($brand-primary, 15%);
+	color:      #fff;
 	padding:    ceil(($line-height-computed)) 0 0;
 	margin:     ceil(($line-height-computed)) 0 0;
 
-	.brand-col {
-		ul.social-nav {
-			margin:          0;
-			padding:         0;
-			list-style-type: none;
-			display:         flex;
-			flex-flow:       row wrap;
-			justify-content: space-around;
+	a {
+		transition: all $speed $easing;
+	}
 
-			li {
+	h2 {
+		font-size:  $font-size-h4;
+		margin-top: 0;
+	}
+
+	.footer-content {
+		display:         flex;
+		flex-flow:       row wrap;
+		justify-content: flex-start;
+		align-content:   flex-start;
+
+		> div {
+			&.brand-col {
+				border-bottom:  1px solid darken($brand-primary, 10%);
+				flex-basis:     100%;
+				padding-bottom: 30px;
+				text-align:     center;
+
 				a {
-					color:      $text-color;
-					font-size:  $font-size-h2;
-					transition: all $speed $easing;
+					display: block;
 
-					&[href*="facebook"] {
-						&:active,
-						&:focus,
-						&:hover {
-							color: #3b5998;
+					img {
+						width:  125px;
+						height: auto;
+						margin: 0 auto;
+					}
+				}
+			}
+
+			&.info-col {
+				flex-basis: 100%;
+
+				> div {
+					border-bottom: 1px solid darken($brand-primary, 10%);
+					border-top:    1px solid rgba(255, 255, 255, 0.1);
+					padding:       15px 0;
+
+					&:last-of-type {
+						border-bottom: none;
+					}
+
+					&.signup-col {
+						p {
+							font-size: $font-size-small;
+						}
+					}
+				}
+
+				ul {
+					&.social-nav {
+						display:         flex;
+						flex-flow:       row nowrap;
+						justify-content: space-around;
+						align-content:   flex-start;
+						padding:         0;
+						margin:          0;
+						list-style-type: none;
+
+						li {
+							flex-basis: 33.333333%;
+
+							a {
+								font-size:  $font-size-h3;
+								color:      rgba(255, 255, 255, 0.8);
+								display:    block;
+								text-align: center;
+
+								&:active,
+								&:focus,
+								&:hover {
+									color: #fff;
+								}
+							}
 						}
 					}
 
-					&[href*="twitter"] {
-						&:active,
-						&:focus,
-						&:hover {
-							color: #1da1f2;
+					&.footer-nav {
+						margin:          0;
+						padding:         0;
+						list-style-type: none;
+						display:         flex;
+						flex-flow:       row wrap;
+						justify-content: space-between;
+
+						li {
+							flex-basis:    100%;
+							margin-bottom: 15px;
+							text-align:    center;
+
+							&:last-of-type {
+								margin-bottom: 0;
+							}
+
+							a {
+								color: rgba(255, 255, 255, 0.8);
+
+								&:active,
+								&:focus,
+								&:hover {
+									color: #fff;
+								}
+							}
 						}
 					}
 				}
@@ -39,22 +118,211 @@ footer:not([class]) {
 		}
 	}
 
-	.nav-col {
-		ul.footer-nav {
-			margin:          0;
-			padding:         0;
-			list-style-type: none;
-			display:         flex;
-			flex-flow:       row wrap;
-			justify-content: space-between;
+	.copyright-wrapper {
+		background-color: darken($brand-primary, 10%);
+
+		p {
+			font-size:  14px;
+			padding:    ceil(($line-height-computed / 2)) 0;
+			text-align: center;
+
+			a {
+				color:       #fff;
+				font-weight: 300;
+
+				&:active,
+				&:focus,
+				&:hover {
+					text-decoration: none;
+				}
+			}
 		}
 	}
+}
 
-	.bottom-wrapper {
-		background: $text-color;
-		color:      $gray-lighter;
-		font-size:  ceil(($font-size-base * 0.8));
-		padding:    $line-height-computed 0 ceil(($line-height-computed / 2));
-		margin:     $line-height-computed 0 0;
+@media #{$small} {
+	footer:not([class]) {
+		.footer-content {
+			> div {
+				&.brand-col {
+					border-bottom: none;
+					flex-basis:    20%;
+					padding:       0 30px 0 0;
+
+					a {
+						img {
+							width: 100%;
+						}
+					}
+				}
+
+				&.info-col {
+					flex-basis:      80%;
+					padding:         0 0 0 15px;
+					display:         flex;
+					flex-flow:       row nowrap;
+					justify-content: space-between;
+					align-content:   flex-start;
+
+					> div {
+						border-bottom: none;
+						border-top:    none;
+						padding:       0;
+
+						&.connect-col {
+							flex-basis:    15%;
+							padding-right: 15px;
+						}
+
+						&.nav-col {
+							flex-basis:    25%;
+							padding-left:  15px;
+							padding-right: 15px;
+						}
+
+						&.signup-col {
+							flex-basis:   60%;
+							padding-left: 15px;
+
+							.gform_button {
+								@include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+							}
+						}
+					}
+
+					ul {
+						&.social-nav {
+							display:         flex;
+							flex-flow:       column wrap;
+							justify-content: space-around;
+							align-content:   flex-start;
+							padding:         0;
+							margin:          0;
+							list-style-type: none;
+
+							li {
+								flex-basis: 100%;
+							}
+						}
+
+						&.footer-nav {
+							margin:          0;
+							padding:         0;
+							list-style-type: none;
+							display:         flex;
+							flex-flow:       column wrap;
+							justify-content: space-between;
+
+							li {
+								flex-basis:    25%;
+								margin-bottom: 15px;
+								text-align:    left;
+
+								&:last-of-type {
+									margin-bottom: 0;
+								}
+
+								a {
+									font-size: $font-size-small;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media #{$medium} {
+	footer:not([class]) {
+		.footer-content {
+			> div {
+				&.brand-col {
+					border-bottom: none;
+					flex-basis:    15%;
+
+					a {
+						img {
+							width: 100%;
+						}
+					}
+				}
+
+				&.info-col {
+					flex-basis:      85%;
+					padding:         0 0 0 15px;
+					display:         flex;
+					flex-flow:       row nowrap;
+					justify-content: space-between;
+					align-content:   flex-start;
+
+					> div {
+						border-bottom: none;
+						border-top:    none;
+						padding:       0;
+
+						&.connect-col {
+							flex-basis:    15%;
+							padding-right: 15px;
+						}
+
+						&.nav-col {
+							flex-basis:    18%;
+							padding-left:  15px;
+							padding-right: 15px;
+						}
+
+						&.signup-col {
+							flex-basis:   67%;
+							padding-left: 15px;
+
+							.gform_button {
+								@include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+							}
+						}
+					}
+
+					ul {
+						&.social-nav {
+							display:         flex;
+							flex-flow:       column wrap;
+							justify-content: space-around;
+							align-content:   flex-start;
+							padding:         0;
+							margin:          0;
+							list-style-type: none;
+
+							li {
+								flex-basis: 100%;
+							}
+						}
+
+						&.footer-nav {
+							margin:          0;
+							padding:         0;
+							list-style-type: none;
+							display:         flex;
+							flex-flow:       column wrap;
+							justify-content: space-between;
+
+							li {
+								flex-basis:    25%;
+								margin-bottom: 15px;
+								text-align:    left;
+
+								&:last-of-type {
+									margin-bottom: 0;
+								}
+
+								a {
+									font-size: $font-size-small;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }

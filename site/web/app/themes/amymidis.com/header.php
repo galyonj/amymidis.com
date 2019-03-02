@@ -35,21 +35,20 @@
 	</script>
 	<!-- End Google Tag Manager -->
 </head>
-<?php $img = get_field('page_background'); $imgUrl = esc_url( $img['url'] ); ?>
-<body data-scroll-id="page-top" id="page-top" style="background-image: url(<?php echo $imgUrl; ?>);" <?php body_class(); ?>>
+<body data-scroll-id="page-top" id="page-top" <?php body_class(); ?>>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
-	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8925PJ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo get_option('google_tag_manager_id'); ?>" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 <a href="#content" class="sr-only">Skip to content</a>
 <a href="#" data-scroll class="scroll-top">
-	<i class="fa fa-chevron-up"></i>
+	<i class="fas fa-chevron-up"></i>
 	<span class="sr-only">scroll to top of page</span>
 </a>
 <div class="wrapper">
 	<header role="banner">
-		<?php if( ! is_front_page() ) : get_template_part( 'view/header', 'navbar'); endif; ?>
+		<?php get_template_part( 'view/header', 'navbar'); ?>
 	</header>
 	<div class="content-wrapper">
 

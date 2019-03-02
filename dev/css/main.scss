@@ -1,5 +1,4 @@
-//@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,600,600i');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,300i,700,700i');
 
 // Partials
 @import 'partial/bootstrap';
@@ -7,8 +6,11 @@
 @import 'partial/structure';
 @import 'partial/breadcrumbs';
 @import 'partial/header';
+@import 'partial/header';
+@import 'partial/jumbotron';
 @import 'partial/type';
 @import 'partial/lists';
+@import 'partial/callout';
 @import 'partial/images';
 @import 'partial/forms';
 @import 'partial/footer';

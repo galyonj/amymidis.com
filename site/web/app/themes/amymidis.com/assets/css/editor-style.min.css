@@ -1,19 +1,19 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,600,600i");#tinymce{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:18px;font-weight:300;line-height:1.44;margin:15px 30px}
-#tinymce h2,#tinymce h3,#tinymce h4,#tinymce h5,#tinymce h6{color:inherit;font-family:inherit;font-weight:700;line-height:1.1}
-#tinymce h2{font-size:31px}
-#tinymce h3{font-size:26px}
-#tinymce h4{font-size:22px}
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,300i,700,700i");#tinymce{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:18px;font-weight:300;line-height:1.5627777778;margin:15px 30px}
+#tinymce h2,#tinymce h3,#tinymce h4,#tinymce h5,#tinymce h6{color:inherit;font-family:"Roboto Slab";font-weight:400;line-height:1.1}
+#tinymce h2{font-size:35px}
+#tinymce h3{font-size:29px}
+#tinymce h4{font-size:23px}
 #tinymce h5{font-size:18px}
 #tinymce h6{font-size:15px}
-#tinymce h2,#tinymce h3{margin-bottom:12.5px;margin-top:25px}
-#tinymce h4,#tinymce h5,#tinymce h6{margin-bottom:12.5px;margin-top:12.5px}
-#tinymce a{color:#427730;font-weight:600;text-decoration:none}
-#tinymce blockquote{border-left:10px solid #eee;font-size:22.5px;margin:0 0 25px;padding:12.5px 25px}
+#tinymce h2,#tinymce h3{margin-bottom:14px;margin-top:28px}
+#tinymce h4,#tinymce h5,#tinymce h6{margin-bottom:14px;margin-top:14px}
+#tinymce a{color:#3a5382;font-weight:600;text-decoration:none}
+#tinymce blockquote{border-left:10px solid #eee;font-size:22.5px;margin:0 0 28px;padding:14px 28px}
 #tinymce blockquote p:first-of-type{margin-top:0}
-#tinymce blockquote footer{color:#777;display:block;font-size:18px;line-height:1.44}
+#tinymce blockquote footer{color:#777;display:block;font-size:18px;line-height:1.5627777778}
 #tinymce blockquote footer:before{content:'\2014 \00A0'}
-#tinymce .lead{font-size:20px;font-weight:300;line-height:1.4;margin-bottom:25px}
-#tinymce .btn{background-color:#427730;background-image:none;border:1px solid transparent;border-radius:4px;color:#fff;display:inline-block;font-size:18px;font-weight:400;line-height:1.44;margin-bottom:0;padding:6px 12px;text-align:center;vertical-align:middle;white-space:nowrap}
+#tinymce .lead{font-size:20px;font-weight:300;line-height:1.4;margin-bottom:28px}
+#tinymce .btn{background-color:#3a5382;background-image:none;border:1px solid transparent;border-radius:4px;color:#fff;display:inline-block;font-size:18px;font-weight:400;line-height:1.5627777778;margin-bottom:0;padding:6px 12px;text-align:center;vertical-align:middle;white-space:nowrap}
 #tinymce .well{background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;-webkit-box-shadow:inset 0 1px 1px 0 rgba(0,0,0,0.05);box-shadow:inset 0 1px 1px 0 rgba(0,0,0,0.05);margin-bottom:20px;min-height:20px;padding:19px}
 #tinymce .well>h2,#tinymce .well>h3{margin-top:0}
 #tinymce .well p:last-of-type,#tinymce .well p:only-of-type{margin:0 !important}
@@ -22,7 +22,7 @@
 #tinymce ol:not([class]){display:table;margin-left:0;padding-left:0}
 #tinymce ol:not([class]) li{counter-increment:table-ol;display:table-row;float:none;font-weight:300;list-style:none}
 #tinymce ol:not([class]) li:before{content:counter(table-ol) ".";display:table-cell;padding-right:10px;text-align:right}
-#tinymce ul.text-columns,#tinymce ul.list--multi-col{-webkit-column-count:2;column-count:2;-webkit-column-gap:30px;column-gap:30px;margin:0 0 12.5px;padding:0}
+#tinymce ul.text-columns,#tinymce ul.list--multi-col{-webkit-column-count:2;column-count:2;-webkit-column-gap:30px;column-gap:30px;margin:0 0 14px;padding:0}
 #tinymce ul.text-columns li,#tinymce ul.list--multi-col li{font-weight:300}
 #tinymce ul.two-column,#tinymce ul.three-column{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;list-style:none;margin:0;padding:0;width:100%}
 #tinymce ul.two-column li{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;margin:0 auto 30px 0;width:48.5%}

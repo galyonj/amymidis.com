@@ -63,7 +63,7 @@ function content_heading() {
 					echo '<p class="lead">Perhaps try another search query.</p>';
 				}
 			} elseif( is_404() ) {
-				echo '<h1>Page not found.</h1>';
+				echo '<h1>404<br><small>Sorry, we can\'t find that page.</small></h1>';
 			} else {
 				// This outputs our fallback condition
 				// for any archive page – categories, tags

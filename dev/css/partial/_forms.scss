@@ -3,7 +3,7 @@
 	@extend .row;
 
 	.gfield {
-		@extend .col-xs-12;
+		//@extend .col-xs-12;
 
 		&.gfield_visibility_hidden,
 		.ginput_product_price_label {
@@ -31,13 +31,14 @@
 			}
 		}
 
-		label {
+		> label {
 			font-size:     $font-size-small;
-			font-weight:   300;
+			font-weight:   600;
 			margin-bottom: 0;
 
 			> .gfield_required {
 				color: #981e32;
+				padding-left: 2px;
 			}
 		}
 
@@ -54,21 +55,8 @@
 
 		&.gsection {
 			h2 {
-				margin:        ceil(($line-height-computed / 2)) 0 0;
-				border-bottom: 1px solid $brand-primary;
+				margin: ceil(($line-height-computed / 2)) 0 0;
 			}
-		}
-
-		&.gf_half {
-			@extend .col-xs-6;
-		}
-
-		&.gf_quarter {
-			@extend .col-xs-3;
-		}
-
-		&.gf_three_col {
-			@extend .col-xs-3;
 		}
 
 		&.gf_credit_card_number {
@@ -101,69 +89,85 @@
 	margin-bottom: 15px;
 }
 
-.gf_employment_status_check {
-	.gfield_checkbox {
-		margin:          0;
-		padding:         0;
-		list-style-type: none;
+.gfield_checkbox {
+	margin:          0;
+	padding:         0;
+	list-style-type: none;
 
-		label {
-			&:after {
-				clear:   both;
-				content: '';
-				display: table;
+	li {
+		&:not(:only-of-type),
+		&:not(:last-of-type) {
+			margin-bottom: 10px;
+		}
+	}
+
+	label {
+		font-size:     $font-size-base;
+		font-weight:   300;
+		margin-bottom: 0;
+		position:      relative;
+		padding-left:  35px;
+		cursor:        pointer;
+
+		&:after {
+			clear:   both;
+			content: '';
+			display: table;
+		}
+
+		input[type="checkbox"] {
+			display: none;
+
+			+ .cr {
+				position: absolute;
+				top:      0;
+				left:     0;
+
+				> .cr-icon {
+					transform:  scale(3) rotateZ(-20deg);
+					opacity:    0;
+					transition: all $speed $easing;
+				}
 			}
 
-			input[type="checkbox"] {
-				display: none;
+			&:checked {
+				+ .cr {
+					background: $brand-primary;
+					color:      #fff;
 
+					> .cr-icon {
+						transform: scale(1) rotateZ(0deg);
+						opacity:   1;
+					}
+				}
+			}
+
+			&:disabled {
 				+ .cr {
 					> .cr-icon {
-						transform:  scale(3) rotateZ(-20deg);
-						opacity:    0;
-						transition: all $speed $easing;
-					}
-				}
-
-				&:checked {
-					+ .cr {
-						background: $brand-primary;
-						color:      #fff;
-
-						> .cr-icon {
-							transform: scale(1) rotateZ(0deg);
-							opacity:   1;
-						}
-					}
-				}
-
-				&:disabled {
-					+ .cr {
-						> .cr-icon {
-							opacity: .5;
-						}
+						opacity: .5;
 					}
 				}
 			}
 		}
+	}
 
-		.cr {
-			border:        2px solid $brand-primary;
-			position:      relative;
-			display:       inline-block;
-			border-radius: $border-radius-small;
-			width:         $font-size-large;
-			height:        $font-size-large;
-			float:         left;
-			margin-right:  ceil(($line-height-computed / 2));
+	.cr {
+		border:        2px solid $brand-primary;
+		position:      relative;
+		display:       inline-block;
+		border-radius: $border-radius-small;
+		width:         $font-size-large;
+		height:        $font-size-large;
+		float:         left;
+		margin-right:  ceil(($line-height-computed / 2));
 
-			.cr-icon {
-				position:    absolute;
-				font-size:   .8em;
-				line-height: 0;
-				top:         50%;
-				left:        20%;
-			}
+		.cr-icon {
+			position:    absolute;
+			font-size:   .8em;
+			line-height: 0;
+			top:         50%;
+			left:        20%;
 		}
 	}
 }
@@ -339,7 +343,27 @@
 	}
 }
 
+.form-mailing-list {
+	.gform_fields {
+		.gfield {
+			label {
+				color: #fff;
+			}
+		}
+	}
+
+	.gform_footer {
+		input[type="submit"] {
+			border: 2px solid #fff;
+		}
+	}
+}
+
 @media #{$small} {
+	.gfield_checkbox {
+		column-count: 2;
+		column-gap:   30px;
+	}
 	.gf_contribution_amount {
 		.ginput_container_radio {
 			.gfield_radio {

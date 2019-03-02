@@ -1,20 +1,21 @@
+
 .scroll-top {
-	position:         fixed;
-	bottom:           15px;
-	right:            15px;
-	color:            #fff;
-	border-radius:    100%;
-	border:           1px solid #fff;
-	background-color: lighten($brand-primary, 15%);
-	font-size:        ceil(($font-size-base * 1.2));
-	padding:          3px 10px 4px;
-	z-index:          1000;
-	transition:       all $speed $easing;
+	background:    $brand-primary;
+	border:        1px solid #fff;
+	border-radius: 50%;
+	bottom:        15px;
+	color:         #fff;
+	font-size:     $font-size-h4;
+	padding:       3px 12px 4px;
+	position:      fixed;
+	right:         15px;
+	transition:    all $speed $easing;
+	z-index:       1000;
 
 	&:active,
 	&:focus,
 	&:hover {
-		background-color: $brand-primary;
-		color:            #fff;
+		background: darken($brand-primary, 10%);
+		color:      #fff;
 	}
 }
