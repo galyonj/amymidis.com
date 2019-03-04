@@ -1,4 +1,4 @@
-footer:not([class]) {
+footer {
 	background: $brand-primary;
 	border-top: 1px darken($brand-primary, 15%);
 	color:      #fff;
@@ -29,12 +29,17 @@ footer:not([class]) {
 
 				a {
 					display: block;
+					margin-bottom : ceil($line-height-computed / 2);
 
 					img {
 						width:  125px;
 						height: auto;
 						margin: 0 auto;
 					}
+				}
+
+				p {
+					margin-bottom: 0;
 				}
 			}
 
@@ -138,10 +143,14 @@ footer:not([class]) {
 			}
 		}
 	}
+
+	&.front-page {
+		margin: 0;
+	}
 }
 
 @media #{$small} {
-	footer:not([class]) {
+	footer {
 		.footer-content {
 			> div {
 				&.brand-col {
@@ -235,7 +244,7 @@ footer:not([class]) {
 }
 
 @media #{$medium} {
-	footer:not([class]) {
+	footer {
 		.footer-content {
 			> div {
 				&.brand-col {

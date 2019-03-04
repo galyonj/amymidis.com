@@ -1,0 +1,117 @@
+.reviews {
+	padding:    ceil($line-height-computed) 0;
+	background: lighten($brand-primary, 35%);
+	margin:     ceil($line-height-computed / 2) 0 0;
+}
+
+.reviews-container {
+
+	.review-col {
+		h2 {
+			color:      #fff;
+			margin:     0;
+			text-align: center;
+		}
+
+		.wprevpro_t1_outer_div {
+			&.w3_wprs-row-padding {
+				margin:  0;
+				padding: 0;
+
+				& div {
+					@extend .w3_wprs-row-padding;
+				}
+			}
+		}
+	}
+}
+
+#wprev-slider-1 {
+	ul {
+		margin:  0;
+		padding: 0;
+	}
+
+	.wprev_preview_bg1_T1 {
+		background: none;
+	}
+}
+
+.wprevpro_t1_DIV_1 {
+	border:        none;
+	border-bottom: 1px solid $gray-dark;
+	border-top:    1px solid $gray-dark;
+	font:          normal normal normal normal 18px / 20.8px $font-family-sans-serif;
+	font-family:   $font-family-sans-serif !important;
+	font-size:     $font-size-large !important;
+	line-height:   $line-height-computed !important;
+	margin:        ceil(($line-height-computed)) 0 !important;
+	padding:       ceil(($line-height-computed * 1.3)) !important;
+	outline:       none;
+
+	&::after {
+		border: none;
+	}
+
+	.w3_wprs-col.l12 {
+		width: 100%;
+	}
+}
+
+.wprevpro_t1_DIV_2 {
+	//@extend .wprevpro_t1_DIV_1;
+	background: transparent;
+	border:     none;
+	box-shadow: none;
+	margin:     0;
+	padding:    0;
+
+	&::before {
+		display: none;
+	}
+
+	&::after {
+		display: none;
+	}
+}
+
+.wprevpro_t1_P_3 {
+	color:  #fff !important;
+	font:   normal normal 300 normal 22px / 1.47 $font-family-sans-serif !important;
+	margin: 0;
+}
+
+.wprevpro_t1_A_8 {
+	display: none;
+}
+
+.wprevpro_t1_SPAN_5 {
+	border:         none;
+	font-size:      $font-size-base;
+	text-transform: capitalize;
+	font-style:     italic;
+	padding:        $line-height-computed 0 0;
+
+	&::before {
+		content: "\2014\00A0";
+	}
+}
+
+.flex-centered {
+	display:         flex;
+	justify-content: center;
+	width:           auto;
+	margin:          0 auto;
+
+	@media #{ $small } {
+		width: 70%;
+	}
+
+	@media #{ $medium } {
+		width: 50%;
+	}
+
+	@media #{ $large } {
+		width: 45%;
+	}
+}

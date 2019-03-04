@@ -141,3 +141,9 @@ $('.dropdown').on('shown.bs.dropdown', function (event) {
     dropdown.find('input.search-query').focus();
   }, 10);
 });
+$('a[href*="newsletter"]').on('click', function (event) {
+  var form = $(event.target);
+  setTimeout(function () {
+    form.find('.first-name input').focus();
+  }, 10);
+});

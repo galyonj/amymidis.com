@@ -148,7 +148,15 @@ const scroll = new SmoothScroll( 'a[href*="#"]', {
 $( '.dropdown' ).on( 'shown.bs.dropdown', function( event ) {
 	let dropdown = $( event.target );
 
-	setTimeout(function() {
+	setTimeout( function() {
 		dropdown.find( 'input.search-query' ).focus();
+	}, 10 );
+} );
+
+$( 'a[href*="newsletter"]' ).on( 'click', function( event ) {
+	const form = $( event.target );
+
+	setTimeout( function() {
+		form.find( '.first-name input' ).focus();
 	}, 10 );
 } );

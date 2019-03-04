@@ -9,7 +9,7 @@
 
 </div>
 </div>
-<footer role="contentinfo">
+<footer <?php if( is_front_page() ) : echo 'class="front-page"'; endif; ?> role="contentinfo">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 footer-content">
@@ -18,6 +18,7 @@
 						<img src="<?php echo trailingslashit( get_stylesheet_directory_uri() ); ?>img/logo-rev-tagline.svg"
 						     alt="Amy Midis for City Council website logo" class="img-responsive">
 					</a>
+					<p class="small">PO Box 9418<br>Knoxville, TN, 37940<br>(865) 384-1558</p>
 				</div>
 				<div class="info-col">
 					<div class="connect-col">
@@ -52,15 +53,10 @@
 						wp_nav_menu( $args );
 						?>
 					</div>
-					<div class="signup-col">
-						<?php
-						$cta_headline = get_field( 'mail_title', 2 );
-						$cta_text     = get_field( 'mail_cta', 2 );
-						$cta_bkg      = get_field( 'mail_bkg_img', 2 );
-						?>
-						<h2><?php echo $cta_headline; ?></h2>
-						<?php echo $cta_text; ?>
-						<?php echo do_shortcode( '[gravityform id=3 title=false description=false]' ); ?>
+					<div id="newsletter-signup" class="signup-col">
+						<h2>Sign up for Amy's Newsletter!</h2>
+						<p>Sign up below to join our mailing list and stay up to date on Amy's campaign for Knoxville City Council.</p>
+						<?php echo do_shortcode( '[gravityform id=4 title=false description=false]' ); ?>
 					</div>
 				</div>
 			</div>

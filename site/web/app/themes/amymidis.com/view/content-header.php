@@ -7,7 +7,7 @@
  **/
 
 ?>
-<?php if ( is_page( array(7, 23, 26, 28 ) ) ) : ?>
+<?php if ( is_page( array( 32, 35, 34, 33) ) ) : ?>
 	<header class="article-header">
 		<?php $img = get_field( 'page_background' ); $imgUrl = esc_url( $img['url'] ); ?>
 		<div class="jumbotron content-page" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,0.3) 100%), url(<?php

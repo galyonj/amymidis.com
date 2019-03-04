@@ -190,13 +190,21 @@ header:not([class]) {
 			align-content:   flex-end;
 			align-items:     flex-end;
 
+			.navbar-header {
+				.navbar-brand {
+					img {
+						width: 130px;
+					}
+				}
+			}
+
 			.navbar-collapse {
 				display:         flex;
 				flex-flow:       row wrap;
 				justify-content: space-between;
 				align-content:   flex-end;
 				align-items:     flex-end;
-				margin-top:      75px;
+				margin-top:      100px;
 			}
 
 			.navbar-nav {
@@ -217,7 +225,7 @@ header:not([class]) {
 				> li {
 					flex-basis: auto;
 					border:     none;
-					padding:    0 0 0 20px;
+					padding:    0 0 0 10px;
 
 					&:active,
 					&:focus,
@@ -263,9 +271,11 @@ header:not([class]) {
 			.nav {
 				> li {
 					padding: 0 0 0 30px;
+
 					&:first-of-type {
 						padding: 0;
 					}
+
 					&.social {
 						a {
 							font-size: $font-size-h4;
@@ -273,7 +283,7 @@ header:not([class]) {
 					}
 
 					> a {
-						font-size: $font-size-large;
+						font-size: $font-size-base;
 					}
 				}
 			}
@@ -286,7 +296,11 @@ header:not([class]) {
 		.navbar-default {
 			.nav {
 				> li {
-					padding: 0 0 0 40px;
+					padding: 0 0 0 35px;
+
+					> a {
+						font-size: $font-size-large;
+					}
 				}
 			}
 		}

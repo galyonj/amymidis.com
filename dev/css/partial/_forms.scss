@@ -37,7 +37,7 @@
 			margin-bottom: 0;
 
 			> .gfield_required {
-				color: #981e32;
+				color: $brand-red;
 				padding-left: 2px;
 			}
 		}
@@ -167,7 +167,7 @@
 			font-size:   .8em;
 			line-height: 0;
 			top:         50%;
-			left:        20%;
+			left:        15%;
 		}
 	}
 }
@@ -261,6 +261,9 @@
 }
 
 .gf_credit_card {
+	label {
+		font-size: $font-size-small;
+	}
 	label.gfield_label {
 		display: none;
 	}
@@ -360,9 +363,13 @@
 }
 
 @media #{$small} {
-	.gfield_checkbox {
-		column-count: 2;
-		column-gap:   30px;
+	.gfield {
+		&.volunteer {
+			.gfield_checkbox {
+				column-count: 2;
+				column-gap:   30px;
+			}
+		}
 	}
 	.gf_contribution_amount {
 		.ginput_container_radio {

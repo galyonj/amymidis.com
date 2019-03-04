@@ -10,7 +10,7 @@ get_header();
 if ( have_posts() ) : while( have_posts() ) :
 	the_post(); ?>
 
-	<?php if ( is_page( array(7, 23, 26, 28 ) ) ) : ?>
+	<?php if ( is_page( array( 32, 35, 34, 33) ) ) : ?>
 		<main>
 			<?php get_template_part( 'view/content', 'header' ); ?>
 			<div class="container">

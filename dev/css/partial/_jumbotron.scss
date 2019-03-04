@@ -37,7 +37,7 @@
 	}
 
 	&.mail-ask {
-		margin:   ceil($line-height-computed /2) 0 ceil($line-height-computed);
+		margin:   ceil($line-height-computed /2) 0 0;
 		padding:  ceil($line-height-computed) 0;
 		position: relative;
 
@@ -66,7 +66,7 @@
 
 		h1 {
 			color:       #fff;
-			font-size:   $jumbotron-heading-font-size;
+			font-size:   ceil($font-size-h1 * 1.5);
 			text-shadow: 3px 3px 13px rgba(0, 0, 0, 0.8);
 		}
 	}
@@ -89,6 +89,90 @@
 				font-family: $font-family-sans-serif;
 				font-size:   $font-size-h2;
 				line-height: .125;
+			}
+		}
+	}
+
+	&.reviews {
+		padding: ceil($line-height-computed) 0;
+		margin:  ceil($line-height-computed / 2) 0 0;
+
+		h2 {
+			color:      #fff;
+			margin-top: 0;
+			text-align: center;
+			//text-shadow: 3px 3px 13px rgba(255, 255, 255, 0.8);
+		}
+
+		.review-text {
+			.wprevpro_t1_outer_div {
+				&.w3_wprs-row-padding {
+					margin:  0;
+					padding: 0;
+
+					& div {
+						@extend .w3_wprs-row-padding;
+					}
+				}
+			}
+
+			.wprev-no-slider {
+				ul {
+					padding: 0;
+				}
+			}
+
+			.w3_wprs-row-padding {
+				> .w3_wprs-col {
+					padding: 0;
+				}
+			}
+
+			.wprevpro_t1_DIV_2 {
+				background:    transparent;
+				border:        0;
+				box-shadow:    none;
+				margin-bottom: 0;
+				margin-top:    0;
+				padding:       20px 20px 20px 25px;
+
+				&::after {
+					display: none;
+				}
+
+				&::before {
+					color:   #fff;
+					margin:  -25px 0px 0px -60px;
+					outline: none !important;
+					font: normal normal normal normal 70px / 96px $font-family-serif, serif
+				}
+
+				.wprevpro_t1_P_3 {
+					color:   #fff;
+					//font: normal normal 300 normal $font-size-large / $line-height-base $font-family-sans-serif !important;
+					font:    normal normal 300 normal 20px / 1.5 $font-family-sans-serif !important;
+					outline: none;
+					margin: 0;
+				}
+			}
+
+			.wprevpro_t1_SPAN_5 {
+				text-transform: capitalize !important;
+				font-size: 18px;
+				font-weight: bold;
+				margin: 0 0 0 25px;
+				padding: 0;
+				color: #fff;
+			}
+
+			.wprevpro_t1_A_8 {
+				display: none !important;
+			}
+
+			a {
+				transition: all $speed $easing;
+				margin: 0 0 0 25px;
+				border: 1px solid #fff;
 			}
 		}
 	}

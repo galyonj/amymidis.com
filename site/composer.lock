@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e15f6fb50666480a24bd346bf7ca8bd",
+    "content-hash": "bd9e8c271e9d895ccfb3e25c9000926e",
     "packages": [
         {
             "name": "composer/installers",
@@ -576,6 +576,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/debug-this/"
+        },
+        {
+            "name": "wpackagist-plugin/juicer",
+            "version": "1.9",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/juicer/",
+                "reference": "tags/1.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/juicer.1.9.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/juicer/"
         },
         {
             "name": "wpackagist-plugin/stream",
