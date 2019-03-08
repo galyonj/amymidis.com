@@ -67,7 +67,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<p>Copyright <a href="<?php echo site_url( '/wp-admin/' ); ?>" rel="noopener nofollow noreferrer">&copy;</a> <?php
-						copyright(); ?>. Paid for by <strong>Amy Midis for Knoxville City Council</strong>. Dennis Owen, treasurer.</p>
+						copyright(); ?>. Paid for by <strong>Amy Midis for Knoxville City Council</strong>. Dennis Owen, Treasurer.</p>
 				</div>
 			</div>
 		</div>

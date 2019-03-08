@@ -1241,7 +1241,7 @@ h1,h2,h3,h4,.gform_fields .gfield.gf_contribution_total .ginput_product_price,h5
 p{font-weight:300}
 p a{font-weight:600}
 .article-header h1{font-size:65px}
-::selection{background:#3a5382;color:#fff}
+::selection{background:#3a5382;border-radius:10% / 50%;color:#eee}
 article ol:not([class]),aside ol:not([class]){display:table;margin:0 0 14px 0 !important;padding:0}
 article ol:not([class]) li,aside ol:not([class]) li{counter-increment:table-ol;display:table-row;float:none;font-weight:300;list-style:none}
 article ol:not([class]) li:before,aside ol:not([class]) li:before{content:counter(table-ol) ".";display:table-cell;padding-right:10px;text-align:right}
@@ -1518,7 +1518,7 @@ header:not([class]) .navbar-default .nav>li .dropdown-menu .navbar-form input{wi
 .callout-old li a:active,.callout-old li a:focus,.callout-old li a:hover{color:#fff;text-shadow:1px 1px 30px #22314d;text-decoration:none}
 .callout-wrapper{padding:15px 0}
 .callout-wrapper ul.callout-list{-ms-flex-line-pack:start;align-content:flex-start;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;list-style-type:none;margin:0 -15px;padding:0}
-.callout-wrapper ul.callout-list>li{-ms-flex-preferred-size:25% !important;flex-basis:25% !important;padding:15px 0 !important}
+.callout-wrapper ul.callout-list>li{-ms-flex-preferred-size:25% !important;flex-basis:25% !important;padding:15px 0 15px !important;padding-bottom:15px !important}
 .callout-wrapper ul.callout-list>li:nth-last-of-type(-n+2){padding-bottom:15px !important}
 .callout-wrapper ul.callout-list>li:not(:last-of-type){border-right:1px solid #2a3c5f}
 .callout-wrapper ul.callout-list>li:not(:first-of-type){border-left:1px solid rgba(255,255,255,0.1)}
@@ -1644,7 +1644,7 @@ header:not([class]) .navbar-default .nav>li>a{font-size:18px}
 .jumbotron.content-page h1{color:#fff;font-size:81px;text-shadow:3px 3px 13px rgba(0,0,0,0.8)}
 .three-col li{-ms-flex-preferred-size:33.3333333333%;flex-basis:33.3333333333%;padding:0 14px 14px 14px}
 .callout-wrapper ul.callout-list{-ms-flex-line-pack:start;align-content:flex-start;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;list-style-type:none;margin:0 -15px;padding:0}
-.callout-wrapper ul.callout-list>li{-ms-flex-preferred-size:25% !important;flex-basis:25% !important;padding-bottom:0 !important}
+.callout-wrapper ul.callout-list>li{-ms-flex-preferred-size:25% !important;flex-basis:25% !important}
 .callout-wrapper ul.callout-list>li:not(:last-of-type){border-right:1px solid #2a3c5f}
 .callout-wrapper ul.callout-list>li:not(:first-of-type){border-left:1px solid rgba(255,255,255,0.1)}
 .callout-wrapper ul.callout li{-ms-flex-preferred-size:100% !important;flex-basis:100% !important;text-align:center}

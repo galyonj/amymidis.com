@@ -34,6 +34,24 @@
 		})(window,document,'script','dataLayer','<?php echo get_option('google_tag_manager_id'); ?>');
 	</script>
 	<!-- End Google Tag Manager -->
+
+	<!-- Facebook Pixel Code -->
+	<script>
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t,s)}(window, document,'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '<?php echo get_option('facebook_pixel_id'); ?>');
+		fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	               src="https://www.facebook.com/tr?id=234704960258864&ev=PageView&noscript=1"
+		/></noscript>
+	<!-- End Facebook Pixel Code -->
 </head>
 <body data-scroll-id="page-top" id="page-top" <?php body_class(); ?>>
 <!-- Google Tag Manager (noscript) -->

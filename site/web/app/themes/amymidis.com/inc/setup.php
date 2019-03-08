@@ -87,15 +87,33 @@ function add_tracking_codes() {
 		)
 	);
 
+	add_settings_field( // Option 1
+		'facebook_pixel_id', // Option ID
+		'Facebook Pixel ID', // Label
+		'facebook_pixel_id_callback', // !important - This is where the args go!
+		'general', // Page it will be displayed (General Settings)
+		'add_tracking_codes', // Name of our section
+		array( // The $args
+			'facebook_pixel_id' // Should match Option ID
+		)
+	);
+
 	register_setting( 'general', 'google_tag_manager_id', 'esc_attr' );
+	register_setting( 'general', 'facebook_pixel_id', 'esc_attr' );
 }
 
 function tracking_codes_callback() {
-	echo '<p>Add the Google Tag Manager ID.</p>';
+	echo '<p>Add tracking codes for various services here. These options are for advanced users only, and changes to them can affect site performance.</p><p>If you aren\'t sure what to do, contact your <strong><a href="mailto:webmaster@amymidis.com?subject=Tracking Codes in Settings Page">webmaster</a></strong> for assistance.</p>';
 }
 
 // Textbox Callback
 function google_tag_manager_id_callback( $args ) {
+	$option = get_option( $args[0] );
+	echo '<input type="text" id="' . $args[0] . '" name="' . $args[0] . '" value="' . $option . '" class="regular-text ltr"/>';
+}
+
+// Textbox Callback
+function facebook_pixel_id_callback( $args ) {
 	$option = get_option( $args[0] );
 	echo '<input type="text" id="' . $args[0] . '" name="' . $args[0] . '" value="' . $option . '" class="regular-text ltr"/>';
 }

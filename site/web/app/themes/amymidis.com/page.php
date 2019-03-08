@@ -6,11 +6,14 @@
  * Description:
  **/
 
+global $post;
+$img = get_field( 'page_background', $post->ID );
+
 get_header();
 if ( have_posts() ) : while( have_posts() ) :
 	the_post(); ?>
 
-	<?php if ( is_page( array( 32, 35, 34, 33) ) ) : ?>
+	<?php if ( $img ) : ?>
 		<main>
 			<?php get_template_part( 'view/content', 'header' ); ?>
 			<div class="container">

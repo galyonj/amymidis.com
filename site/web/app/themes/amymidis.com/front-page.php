@@ -63,7 +63,7 @@ if ( have_posts() ) : while( have_posts() ) :
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 review-text">
 					<?php do_action( 'wprev_pro_plugin_action', 1 ); ?>
-					<a class="btn btn-primary" href="https://www.facebook.com/pg/votemidis/reviews/?utm_source=website_banner">
+					<a class="btn btn-primary" target="_blank" href="https://www.facebook.com/pg/votemidis/reviews/?utm_source=website_banner">
 						Add your voice!
 					</a>
 				</div>

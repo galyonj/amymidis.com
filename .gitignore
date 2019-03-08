@@ -14,6 +14,7 @@ node_modules/
 *.jar
 *.rar
 *.tar
+!.tar.gz
 *.zip
 *.tgz
 *.map
@@ -21,7 +22,7 @@ node_modules/
 # Logs and databases #
 ######################
 *.log
-*.sql
+!*.sql
 *.env
 
 # OS generated files #
@@ -64,5 +65,8 @@ assets/bower_components/*
 
 # PhpStrom Project Files #
 .idea/
-library/vendors/composer
+library/vendors/composers
 assets/img/.DS_Store
+
+# Make sure backups get saved
+!.backup/*

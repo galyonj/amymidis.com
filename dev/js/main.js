@@ -51,6 +51,9 @@ const scroll = new SmoothScroll( 'a[href*="#"]', {
 		} );
 	} );
 
+	// Future-proofing the forms
+	$( '.gform_fields > li:not([class~="col-"])' ).addClass( 'col-xs-12' );
+
 	// This function pushes the footer down
 	// on pages that have short content
 	$( window ).on( 'load resize', function stickyFooter() {
@@ -160,3 +163,5 @@ $( 'a[href*="newsletter"]' ).on( 'click', function( event ) {
 		form.find( '.first-name input' ).focus();
 	}, 10 );
 } );
+
+$( '.gform_button[value="Contribute!"]' ).on( 'click' );

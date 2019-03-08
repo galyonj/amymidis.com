@@ -18,6 +18,7 @@ p {
 }
 
 ::selection {
-	background: $brand-primary;
-	color: #fff;
+	background:    $brand-primary;
+	border-radius: 10% / 50%;
+	color:         $gray-lighter;
 }
