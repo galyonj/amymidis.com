@@ -97,6 +97,20 @@ article, aside {
 	}
 }
 
+// Text columns
+.text-columns {
+	list-style:   none;
+	margin:       0;
+	padding:      0;
+}
+
+@media #{$small} {
+	.text-columns {
+		column-count: 2;
+		column-gap:   20px;
+	}
+}
+
 // Special list styling
 .callout-old {
 	li {
@@ -117,8 +131,8 @@ article, aside {
 			&:active,
 			&:focus,
 			&:hover {
-				color: #fff;
-				text-shadow: 1px 1px 30px darken($brand-primary, 15%);
+				color:           #fff;
+				text-shadow:     1px 1px 30px darken($brand-primary, 15%);
 				text-decoration: none;
 			}
 		}
@@ -153,8 +167,8 @@ article, aside {
 				&:active,
 				&:focus,
 				&:hover {
-					color: #fff;
-					text-shadow: 1px 1px 30px darken($brand-primary, 15%);
+					color:           #fff;
+					text-shadow:     1px 1px 30px darken($brand-primary, 15%);
 					text-decoration: none;
 				}
 			}

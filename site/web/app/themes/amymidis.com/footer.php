@@ -18,7 +18,7 @@
 						<img src="<?php echo trailingslashit( get_stylesheet_directory_uri() ); ?>img/logo-rev-tagline.svg"
 						     alt="Amy Midis for City Council website logo" class="img-responsive">
 					</a>
-					<p class="small">PO Box 9418<br>Knoxville, TN, 37940<br>(865) 384-1558</p>
+					<p class="small">PO Box 9418<br>Knoxville, TN 37940<br>(865) 419-0581</p>
 				</div>
 				<div class="info-col">
 					<div class="connect-col">

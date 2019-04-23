@@ -1,22 +1,30 @@
+a {
+	transition: all $speed $easing;
+}
 .link-wrapper {
 	background-color: $brand-primary;
-	padding: 30px 0;
-	margin-bottom: 30px;
+	padding:          30px 0;
+	margin-bottom:    30px;
 }
 
-.triangle {
+.review-triangle {
 	border-left:  10px solid transparent;
 	border-right: 10px solid transparent;
 	border-top:   10px solid #fff;
 	height:       10px;
 	width:        10px;
 	left:         440px;
-	margin:       -29px auto 33px auto;
+	margin:       -28px auto 33px auto;
 }
-
 
 article {
 	:first-child {
 		margin-top: 0;
 	}
+}
+
+.announcement-wrapper {
+	background: $brand-red;
+	border-top: 1px solid darken($brand-red, 15%);
+	padding:    ceil(($line-height-computed * 1.5));
 }

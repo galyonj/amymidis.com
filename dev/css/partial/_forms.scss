@@ -37,7 +37,7 @@
 			margin-bottom: 0;
 
 			> .gfield_required {
-				color: $brand-red;
+				color:        $brand-red;
 				padding-left: 2px;
 			}
 		}
@@ -56,6 +56,13 @@
 		&.gsection {
 			h2 {
 				margin: ceil(($line-height-computed / 2)) 0 0;
+			}
+
+			&:not(:first-of-type) {
+				h2 {
+					border-top:  1px solid $gray-lighter;
+					padding-top: 28px;
+				}
 			}
 		}
 
@@ -260,67 +267,18 @@
 	}
 }
 
-.gf_credit_card {
-	label {
-		font-size: $font-size-small;
-	}
-	label.gfield_label {
-		display: none;
-	}
+.ginput_container_creditcard {
 
-	.ginput_container_creditcard {
+	.ginput_full {
+		margin-top: ceil($line-height-computed / 2);
 
-		> span {
-			&:not(:last-of-type) {
-				margin-bottom: 15px !important;
-				margin-top:    15px !important;
-			}
-		}
-
-		.gform_card_icon_container {
-			display: none;
-		}
-	}
-
-	.gfield_creditcard_warning_message {
-		@extend .alert;
-		@extend .alert-danger;
-		font-size: $font-size-small;
-		padding:   5px 10px;
-		margin:    5px 0 0;
-	}
-
-	.ginput_full.ginput_cardextras {
-		@extend .row;
-		display:    block !important;
-		margin-top: 15px;
-
-		.ginput_cardinfo_left {
-			@extend .col-xs-8;
-		}
-
-		.ginput_cardinfo_right {
-			@extend .col-xs-4;
-		}
-
-		.ginput_cardinfo_left {
-			.ginput_card_expiration_container {
-				@extend .row;
-				display:     block !important;
-				margin-left: 0;
-
-				label {
-					width: 100%;
-				}
-
-				select {
-					width: 45%;
-					float: left;
-
-					&:first-of-type {
-						margin-right: 20px;
-					}
-				}
+		.gfield_description {
+			&.validation_message {
+				@extend .alert;
+				@extend .alert-danger;
+				font-size: $font-size-small;
+				padding:   5px 10px;
+				margin:    5px 0 0;
 			}
 		}
 	}

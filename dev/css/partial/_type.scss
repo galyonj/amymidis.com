@@ -22,3 +22,21 @@ p {
 	border-radius: 10% / 50%;
 	color:         $gray-lighter;
 }
+
+.announcement-wrapper {
+	h2 {
+		border-bottom:  1px solid darken($brand-red, 10%);
+		color:          #fff;
+		margin:         0;
+		padding-bottom: ceil(($line-height-computed / 2));
+	}
+
+	p {
+		color: #fff;
+
+		&:first-of-type {
+			padding-top: ceil(($line-height-computed / 2));
+			border-top:  1px solid rgba(255, 255, 255, 0.1);
+		}
+	}
+}

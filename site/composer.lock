@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd9e8c271e9d895ccfb3e25c9000926e",
+    "content-hash": "b9d9580caf87c44bbd2bc02176a7d52e",
     "packages": [
         {
             "name": "composer/installers",
@@ -702,6 +702,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wp-facebook-reviews/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-post-expires",
+            "version": "1.2.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-post-expires/",
+                "reference": "tags/1.2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-post-expires.1.2.2.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-post-expires/"
         }
     ],
     "packages-dev": [

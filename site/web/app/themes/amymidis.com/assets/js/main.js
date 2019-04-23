@@ -21,7 +21,7 @@ var scroll = new SmoothScroll('a[href*="#"]', {
 
 });
 
-(function () {
+(function ($) {
   $(document).ready(function () {
     $('.scroll-top').hide();
     $(window).scroll(function showScrollButton() {
@@ -46,6 +46,16 @@ var scroll = new SmoothScroll('a[href*="#"]', {
     $('a:not([href^="#"])').each(function () {
       var elem = $(this);
       elem.attr('rel', 'noreferrer');
+    }); // Make sure that iframes and embeds are wrapped properly for responsive display
+    // collect everything that might contain embedded content
+
+    var allIframes = $('iframe[ src*="//player.vimeo.com" ], iframe[ src*="//www.youtube.com" ], iframe[ src*="//www.google.com/maps" ], object, embed, video');
+    allIframes.each(function () {
+      // clean up the iframe element and add a
+      // responsive class to key on later for adding wrappers
+      $(this).removeAttr('height width').addClass('embed-responsive-item'); // add a wrapper around the iframe
+
+      $(this).wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
     });
   }); // Future-proofing the forms
 
@@ -107,8 +117,6 @@ var scroll = new SmoothScroll('a[href*="#"]', {
       } else {
         containerMargin = (windowHeight - navbarHeight - mastheadContentHeight) / 2;
       }
-
-      console.log('probably a phone');
     } else {
       if (windowWidth >= 768 && windowWidth <= 991) {
         containerMargin = windowWidth * 0.15;
@@ -128,12 +136,54 @@ var scroll = new SmoothScroll('a[href*="#"]', {
     }
 
     $('.jumbotron.front-page').css('padding', containerMargin + 'px 0');
-  }).trigger('resize'); // set focus to the search bar when it's been exposed
-  // at sizes larger than 767px.
+  }).trigger('resize'); // Announcement modal/REST stuff
 
-  $('.dropdown').on('shown.bs.dropdown', function (event) {
-    var dropdown = $(event.target);
-    dropdown.find('.dropdown-menu li .navbar-form .input-group .search-query.form-control').focus();
+  var announcementModal = $('#announcementModal');
+
+  if ('true' !== sessionStorage.getItem('modal-hide')) {
+    $.ajax({
+      contentType: 'application/json; charset=utf-8',
+      dataType: 'json',
+      async: true,
+      type: 'GET',
+      url: window.location.protocol + '//' + window.location.hostname + '/wp-json/wp/v2/posts/',
+      data: {
+        categories: 5,
+        per_page: 1
+      },
+      success: function success(data, status, jqXHR) {
+        var post = data.shift(),
+            announcementModal = $('#announcementModal'); // Do stuff.
+
+        $('.modal-title').text(post.title.rendered);
+        $('.modal-body').append('<img src="' + post.fimg_url + '" class="img-responsive">').append(post.excerpt.rendered);
+        $('.modal-footer a.modal-read-more').attr({
+          'href': post.link,
+          'title': post.title.rendered
+        });
+        announcementModal.modal('show');
+      },
+      error: function error(_error, status, jqXHR) {
+        $('#announcementModal').modal('hide');
+
+        if (_error || status || jqXHR) {
+          console.log('Errors found.');
+        }
+      }
+    });
+  } // Once the modal is hidden, keep it hidden as long
+  // as the user's session exists.
+
+
+  announcementModal.on('hidden.bs.modal', function (e) {
+    if ('true' !== sessionStorage.getItem('modal-hide')) {
+      sessionStorage.setItem('modal-hide', 'true');
+    }
+  });
+  $('.modal-read-more').on('click', function () {
+    if ('true' !== sessionStorage.getItem('modal-hide')) {
+      sessionStorage.setItem('modal-hide', 'true');
+    }
   });
 })(jQuery);
 

@@ -46,10 +46,12 @@
 				?>
 				<li class="visible-xs">
 					<form action="<?php echo home_url( '/' ); ?>" class="navbar-form" role="search" method="get" id="searchform">
-						<div class="form-group">
+						<div class="input-group">
 							<label for="s" class="sr-only">Search <?php echo get_bloginfo( 'name' ); ?></label>
-							<input name="s" id="s" type="text" class="search-query form-control" autocomplete="on" placeholder="<?php _e
-							('Search',''); ?>">
+							<input name="s" id="s" type="text" class="search-query form-control" autocomplete="on" placeholder="<?php _e('Search',''); ?>">
+							<span class="input-group-btn">
+								<button class="btn btn-primary" type="submit">Go</button>
+							</span>
 						</div>
 					</form>
 				</li>
@@ -63,8 +65,8 @@
 									<label for="s" class="sr-only">Search <?php echo get_bloginfo( 'name' ); ?></label>
 									<input name="s" id="s" type="text" class="search-query form-control" autocomplete="on" placeholder="<?php _e('Search',''); ?>">
 									<span class="input-group-btn">
-									<button class="btn btn-primary" type="submit">Go</button>
-								</span>
+										<button class="btn btn-primary" type="submit">Go</button>
+									</span>
 								</div>
 							</form>
 						</li>

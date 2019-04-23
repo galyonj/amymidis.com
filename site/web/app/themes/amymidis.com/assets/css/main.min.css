@@ -401,21 +401,21 @@ pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;backgrou
 .container-fluid{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
 .container-fluid:before,.container-fluid:after{display:table;content:" "}
 .container-fluid:after{clear:both}
-.row,.gform_fields,.gf_credit_card .ginput_full.ginput_cardextras,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .ginput_card_expiration_container{margin-right:-15px;margin-left:-15px}
-.row:before,.gform_fields:before,.gf_credit_card .ginput_full.ginput_cardextras:before,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .ginput_card_expiration_container:before,.row:after,.gform_fields:after,.gf_credit_card .ginput_full.ginput_cardextras:after,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .ginput_card_expiration_container:after{display:table;content:" "}
-.row:after,.gform_fields:after,.gf_credit_card .ginput_full.ginput_cardextras:after,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .ginput_card_expiration_container:after{clear:both}
+.row,.gform_fields{margin-right:-15px;margin-left:-15px}
+.row:before,.gform_fields:before,.row:after,.gform_fields:after{display:table;content:" "}
+.row:after,.gform_fields:after{clear:both}
 .row-no-gutters{margin-right:0;margin-left:0}
 .row-no-gutters [class*="col-"]{padding-right:0;padding-left:0}
-.col-xs-1,.col-sm-1,.col-md-1,.col-lg-1,.col-xs-2,.col-sm-2,.gform_fields .gfield.gf_credit_card_expiry,.gform_fields .gfield.gf_credit_card_security,.col-md-2,.col-lg-2,.col-xs-3,.gform_fields .gfield.gf_credit_card_expiry,.gform_fields .gfield.gf_credit_card_security,.col-sm-3,.col-md-3,.col-lg-3,.col-xs-4,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_right,.col-sm-4,.gform_fields .gfield.gf_credit_card_number,.gform_fields .gfield.gf_credit_card_holder,.col-md-4,.col-lg-4,.col-xs-5,.col-sm-5,.col-md-5,.col-lg-5,.col-xs-6,.gform_fields .gfield.gf_credit_card_number,.col-sm-6,.col-md-6,.col-lg-6,.col-xs-7,.col-sm-7,.col-md-7,.col-lg-7,.col-xs-8,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left,.col-sm-8,.col-md-8,.col-lg-8,.col-xs-9,.col-sm-9,.col-md-9,.col-lg-9,.col-xs-10,.col-sm-10,.col-md-10,.col-lg-10,.col-xs-11,.col-sm-11,.col-md-11,.col-lg-11,.col-xs-12,.gform_fields .gfield.gf_credit_card_holder,.col-sm-12,.col-md-12,.col-lg-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px}
-.col-xs-1,.col-xs-2,.col-xs-3,.gform_fields .gfield.gf_credit_card_expiry,.gform_fields .gfield.gf_credit_card_security,.col-xs-4,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_right,.col-xs-5,.col-xs-6,.gform_fields .gfield.gf_credit_card_number,.col-xs-7,.col-xs-8,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12,.gform_fields .gfield.gf_credit_card_holder{float:left}
+.col-xs-1,.col-sm-1,.col-md-1,.col-lg-1,.col-xs-2,.col-sm-2,.gform_fields .gfield.gf_credit_card_expiry,.gform_fields .gfield.gf_credit_card_security,.col-md-2,.col-lg-2,.col-xs-3,.gform_fields .gfield.gf_credit_card_expiry,.gform_fields .gfield.gf_credit_card_security,.col-sm-3,.col-md-3,.col-lg-3,.col-xs-4,.col-sm-4,.gform_fields .gfield.gf_credit_card_number,.gform_fields .gfield.gf_credit_card_holder,.col-md-4,.col-lg-4,.col-xs-5,.col-sm-5,.col-md-5,.col-lg-5,.col-xs-6,.gform_fields .gfield.gf_credit_card_number,.col-sm-6,.col-md-6,.col-lg-6,.col-xs-7,.col-sm-7,.col-md-7,.col-lg-7,.col-xs-8,.col-sm-8,.col-md-8,.col-lg-8,.col-xs-9,.col-sm-9,.col-md-9,.col-lg-9,.col-xs-10,.col-sm-10,.col-md-10,.col-lg-10,.col-xs-11,.col-sm-11,.col-md-11,.col-lg-11,.col-xs-12,.gform_fields .gfield.gf_credit_card_holder,.col-sm-12,.col-md-12,.col-lg-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px}
+.col-xs-1,.col-xs-2,.col-xs-3,.gform_fields .gfield.gf_credit_card_expiry,.gform_fields .gfield.gf_credit_card_security,.col-xs-4,.col-xs-5,.col-xs-6,.gform_fields .gfield.gf_credit_card_number,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12,.gform_fields .gfield.gf_credit_card_holder{float:left}
 .col-xs-1{width:8.3333333333%}
 .col-xs-2{width:16.6666666667%}
 .col-xs-3,.gform_fields .gfield.gf_credit_card_expiry,.gform_fields .gfield.gf_credit_card_security{width:25%}
-.col-xs-4,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_right{width:33.3333333333%}
+.col-xs-4{width:33.3333333333%}
 .col-xs-5{width:41.6666666667%}
 .col-xs-6,.gform_fields .gfield.gf_credit_card_number{width:50%}
 .col-xs-7{width:58.3333333333%}
-.col-xs-8,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left{width:66.6666666667%}
+.col-xs-8{width:66.6666666667%}
 .col-xs-9{width:75%}
 .col-xs-10{width:83.3333333333%}
 .col-xs-11{width:91.6666666667%}
@@ -870,11 +870,11 @@ a.badge:hover,a.badge:focus{color:#fff;text-decoration:none;cursor:pointer}
 .thumbnail>img,.thumbnail a>img{display:block;max-width:100%;height:auto;margin-right:auto;margin-left:auto}
 .thumbnail .caption{padding:9px;color:#333}
 a.thumbnail:hover,a.thumbnail:focus,a.thumbnail.active{border-color:#3a5382}
-.alert,.gf_credit_card .gfield_creditcard_warning_message,.gform_validation_error .gfield_error .validation_message{padding:15px;margin-bottom:28px;border:1px solid transparent;border-radius:4px}
-.alert h4,.gf_credit_card .gfield_creditcard_warning_message h4,.gform_validation_error .gfield_error .validation_message h4,.alert .gform_fields .gfield.gf_contribution_total .ginput_product_price,.gform_fields .gfield.gf_contribution_total .alert .ginput_product_price,.gf_credit_card .gfield_creditcard_warning_message .gform_fields .gfield.gf_contribution_total .ginput_product_price,.gform_fields .gfield.gf_contribution_total .gf_credit_card .gfield_creditcard_warning_message .ginput_product_price,.gform_validation_error .gfield_error .validation_message .gform_fields .gfield.gf_contribution_total .ginput_product_price,.gform_fields .gfield.gf_contribution_total .gform_validation_error .gfield_error .validation_message .ginput_product_price{margin-top:0;color:inherit}
-.alert .alert-link,.gf_credit_card .gfield_creditcard_warning_message .alert-link,.gform_validation_error .gfield_error .validation_message .alert-link{font-weight:bold}
-.alert>p,.gf_credit_card .gfield_creditcard_warning_message>p,.gform_validation_error .gfield_error .validation_message>p,.alert>ul,.gf_credit_card .gfield_creditcard_warning_message>ul,.gform_validation_error .gfield_error .validation_message>ul{margin-bottom:0}
-.alert>p+p,.gf_credit_card .gfield_creditcard_warning_message>p+p,.gform_validation_error .gfield_error .validation_message>p+p{margin-top:5px}
+.alert,.ginput_container_creditcard .ginput_full .gfield_description.validation_message,.gform_validation_error .gfield_error .validation_message{padding:15px;margin-bottom:28px;border:1px solid transparent;border-radius:4px}
+.alert h4,.ginput_container_creditcard .ginput_full .gfield_description.validation_message h4,.gform_validation_error .gfield_error .validation_message h4,.alert .gform_fields .gfield.gf_contribution_total .ginput_product_price,.gform_fields .gfield.gf_contribution_total .alert .ginput_product_price,.ginput_container_creditcard .ginput_full .gfield_description.validation_message .gform_fields .gfield.gf_contribution_total .ginput_product_price,.gform_fields .gfield.gf_contribution_total .ginput_container_creditcard .ginput_full .gfield_description.validation_message .ginput_product_price,.gform_validation_error .gfield_error .validation_message .gform_fields .gfield.gf_contribution_total .ginput_product_price,.gform_fields .gfield.gf_contribution_total .gform_validation_error .gfield_error .validation_message .ginput_product_price{margin-top:0;color:inherit}
+.alert .alert-link,.ginput_container_creditcard .ginput_full .gfield_description.validation_message .alert-link,.gform_validation_error .gfield_error .validation_message .alert-link{font-weight:bold}
+.alert>p,.ginput_container_creditcard .ginput_full .gfield_description.validation_message>p,.gform_validation_error .gfield_error .validation_message>p,.alert>ul,.ginput_container_creditcard .ginput_full .gfield_description.validation_message>ul,.gform_validation_error .gfield_error .validation_message>ul{margin-bottom:0}
+.alert>p+p,.ginput_container_creditcard .ginput_full .gfield_description.validation_message>p+p,.gform_validation_error .gfield_error .validation_message>p+p{margin-top:5px}
 .alert-dismissable,.alert-dismissible{padding-right:35px}
 .alert-dismissable .close,.alert-dismissible .close{position:relative;top:-2px;right:-21px;color:inherit}
 .alert-success{color:#3c763d;background-color:#dff0d8;border-color:#d6e9c6}
@@ -886,9 +886,9 @@ a.thumbnail:hover,a.thumbnail:focus,a.thumbnail.active{border-color:#3a5382}
 .alert-warning{color:#8a6d3b;background-color:#fcf8e3;border-color:#faebcc}
 .alert-warning hr{border-top-color:#f7e1b5}
 .alert-warning .alert-link{color:#66512c}
-.alert-danger,.gf_credit_card .gfield_creditcard_warning_message,.gform_validation_error .gfield_error .validation_message{color:#a94442;background-color:#f2dede;border-color:#ebccd1}
-.alert-danger hr,.gf_credit_card .gfield_creditcard_warning_message hr,.gform_validation_error .gfield_error .validation_message hr{border-top-color:#e4b9c0}
-.alert-danger .alert-link,.gf_credit_card .gfield_creditcard_warning_message .alert-link,.gform_validation_error .gfield_error .validation_message .alert-link{color:#843534}
+.alert-danger,.ginput_container_creditcard .ginput_full .gfield_description.validation_message,.gform_validation_error .gfield_error .validation_message{color:#a94442;background-color:#f2dede;border-color:#ebccd1}
+.alert-danger hr,.ginput_container_creditcard .ginput_full .gfield_description.validation_message hr,.gform_validation_error .gfield_error .validation_message hr{border-top-color:#e4b9c0}
+.alert-danger .alert-link,.ginput_container_creditcard .ginput_full .gfield_description.validation_message .alert-link,.gform_validation_error .gfield_error .validation_message .alert-link{color:#843534}
 .progress{height:28px;margin-bottom:28px;overflow:hidden;background-color:#f5f5f5;border-radius:4px;-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.1);box-shadow:inset 0 1px 2px rgba(0,0,0,0.1)}
 .progress-bar{float:left;width:0;height:100%;font-size:15px;line-height:28px;color:#fff;text-align:center;background-color:#3a5382;-webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,0.15);box-shadow:inset 0 -1px 0 rgba(0,0,0,0.15);-webkit-transition:width .6s ease;transition:width .6s ease}
 .progress-striped .progress-bar,.progress-bar-striped{background-image:linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);background-size:40px 40px}
@@ -1139,9 +1139,11 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 .visible-print-inline-block{display:none !important}
 .scroll-top{background:#3a5382;border:1px solid #fff;border-radius:50%;bottom:15px;color:#fff;font-size:23px;padding:3px 12px 4px;position:fixed;right:15px;-webkit-transition:all 400ms ease-in-out;transition:all 400ms ease-in-out;z-index:1000}
 .scroll-top:active,.scroll-top:focus,.scroll-top:hover{background:#2a3c5f;color:#fff}
+a{-webkit-transition:all 400ms ease-in-out;transition:all 400ms ease-in-out}
 .link-wrapper{background-color:#3a5382;padding:30px 0;margin-bottom:30px}
-.triangle{border-left:10px solid transparent;border-right:10px solid transparent;border-top:10px solid #fff;height:10px;width:10px;left:440px;margin:-29px auto 33px auto}
+.review-triangle{border-left:10px solid transparent;border-right:10px solid transparent;border-top:10px solid #fff;height:10px;width:10px;left:440px;margin:-28px auto 33px auto}
 article :first-child{margin-top:0}
+.announcement-wrapper{background:#db4949;border-top:1px solid #b42424;padding:42px}
 .breadcrumb{background:0;list-style-type:none;margin:0;padding:0 0 24px}
 .breadcrumb>li{font-size:15px;font-weight:300}
 .breadcrumb>li a{font-weight:600}
@@ -1225,7 +1227,7 @@ header:not([class]) .navbar-default .navbar-form input{font-weight:300}
 .jumbotron.error-page{border-bottom:0;padding:140px 0 140px;margin-bottom:30px;background-size:cover;background-repeat:no-repeat;background-position:left top}
 .jumbotron.error-page h1{color:#3a5382;font-size:162px;line-height:.25;text-align:center}
 .jumbotron.error-page h1 small{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:35px;line-height:.125}
-.jumbotron.reviews{padding:28px 0;margin:14px 0 0}
+.jumbotron.reviews{padding:28px 0;margin:0}
 .jumbotron.reviews h2{color:#fff;margin-top:0;text-align:center}
 .jumbotron.reviews .review-text .wprevpro_t1_outer_div.w3_wprs-row-padding,.jumbotron.reviews .review-text .wprevpro_t1_outer_div.w3_wprs-row-padding div.wprevpro_t1_outer_div{margin:0;padding:0}
 .jumbotron.reviews .review-text .wprev-no-slider ul{padding:0}
@@ -1242,6 +1244,9 @@ p{font-weight:300}
 p a{font-weight:600}
 .article-header h1{font-size:65px}
 ::selection{background:#3a5382;border-radius:10% / 50%;color:#eee}
+.announcement-wrapper h2{border-bottom:1px solid #c92828;color:#fff;margin:0;padding-bottom:14px}
+.announcement-wrapper p{color:#fff}
+.announcement-wrapper p:first-of-type{padding-top:14px;border-top:1px solid rgba(255,255,255,0.1)}
 article ol:not([class]),aside ol:not([class]){display:table;margin:0 0 14px 0 !important;padding:0}
 article ol:not([class]) li,aside ol:not([class]) li{counter-increment:table-ol;display:table-row;float:none;font-weight:300;list-style:none}
 article ol:not([class]) li:before,aside ol:not([class]) li:before{content:counter(table-ol) ".";display:table-cell;padding-right:10px;text-align:right}
@@ -1254,6 +1259,7 @@ article ul:not([class]) li:before,aside ul:not([class]) li:before{content:"\25FC
 .four-col li:nth-last-of-type(-n+2){padding-bottom:0}
 .three-col li{-ms-flex-preferred-size:100%;flex-basis:100%;padding:0 14px 14px 14px}
 .two-col li{-ms-flex-preferred-size:50%;flex-basis:50%;padding:0 14px 14px 14px}
+.text-columns{list-style:none;margin:0;padding:0}
 .callout-old li a{color:#fff;display:block;text-align:center;font-weight:400;-webkit-transition:all 400ms ease-in-out;transition:all 400ms ease-in-out}
 .callout-old li a h2{font-size:23px;margin:14px 0 0;font-weight:400}
 .callout-old li a:active,.callout-old li a:focus,.callout-old li a:hover{color:#fff;text-shadow:1px 1px 30px #22314d;text-decoration:none}
@@ -1285,6 +1291,7 @@ img.aligncenter.headshot,img.alignleft.headshot,img.alignnone.headshot,img.align
 .gform_fields .gfield input:not([type="radio"]):not([type="checkbox"])::-ms-input-placeholder,.gform_fields .gfield select::-ms-input-placeholder,.gform_fields .gfield textarea::-ms-input-placeholder{font-weight:300 !important}
 .gform_fields .gfield input:not([type="radio"]):not([type="checkbox"])::placeholder,.gform_fields .gfield select::placeholder,.gform_fields .gfield textarea::placeholder{font-weight:300 !important}
 .gform_fields .gfield.gsection h2{margin:14px 0 0}
+.gform_fields .gfield.gsection:not(:first-of-type) h2{border-top:1px solid #eee;padding-top:28px}
 .gfield_html p{margin-bottom:0}
 .gform_button{margin-bottom:15px}
 .gfield_checkbox{margin:0;padding:0;list-style-type:none}
@@ -1311,16 +1318,8 @@ img.aligncenter.headshot,img.alignleft.headshot,img.alignnone.headshot,img.align
 .gf_contribution_amount .ginput_container_radio .gfield_radio input[type=text]::placeholder,.gf_contribution_amount .ginput_container_radio .gfield_radio input[type=number]::placeholder{font-weight:300 !important}
 .gf_contribution_amount .ginput_container_radio .gfield_radio li{margin-bottom:0;padding:0 10px 10px 0;width:50%}
 .gf_contribution_amount .ginput_container_radio .gfield_radio li:nth-of-type(2n){padding:0 0 0 10px}
-.gf_credit_card label{font-size:15px}
-.gf_credit_card label.gfield_label{display:none}
-.gf_credit_card .ginput_container_creditcard>span:not(:last-of-type){margin-bottom:15px !important;margin-top:15px !important}
-.gf_credit_card .ginput_container_creditcard .gform_card_icon_container{display:none}
-.gf_credit_card .gfield_creditcard_warning_message{font-size:15px;padding:5px 10px;margin:5px 0 0}
-.gf_credit_card .ginput_full.ginput_cardextras{display:block !important;margin-top:15px}
-.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .ginput_card_expiration_container{display:block !important;margin-left:0}
-.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .ginput_card_expiration_container label{width:100%}
-.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .ginput_card_expiration_container select{width:45%;float:left}
-.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .ginput_card_expiration_container select:first-of-type{margin-right:20px}
+.ginput_container_creditcard .ginput_full{margin-top:14px}
+.ginput_container_creditcard .ginput_full .gfield_description.validation_message{font-size:15px;padding:5px 10px;margin:5px 0 0}
 #input_2_54_5_label{width:100%}
 .gform_validation_error .gfield_error .validation_message{font-size:15px;padding:5px 10px;margin:5px 0 0}
 .gform_validation_error .gfield_error input,.gform_validation_error .gfield_error select,.gform_validation_error .gfield_error textarea{border:1px solid #981e32 !important}
@@ -1352,6 +1351,10 @@ footer .copyright-wrapper p{font-size:14px;padding:14px 0;text-align:center}
 footer .copyright-wrapper p a{color:#fff;font-weight:300}
 footer .copyright-wrapper p a:active,footer .copyright-wrapper p a:focus,footer .copyright-wrapper p a:hover{text-decoration:none}
 footer.front-page{margin:0}
+.modal{text-align:center}
+.modal .modal-body img{margin-bottom:14px}
+.modal:before{display:inline-block;vertical-align:middle;content:" ";height:75px}
+.modal-dialog{display:inline-block;text-align:left;vertical-align:middle}
 @media screen and (-webkit-min-device-pixel-ratio:0){input[type="date"].form-control,.gform_fields .gfield input[type="date"]:not([type="radio"]):not([type="checkbox"]),input[type="time"].form-control,.gform_fields .gfield input[type="time"]:not([type="radio"]):not([type="checkbox"]),input[type="datetime-local"].form-control,.gform_fields .gfield input[type="datetime-local"]:not([type="radio"]):not([type="checkbox"]),input[type="month"].form-control,.gform_fields .gfield input[type="month"]:not([type="radio"]):not([type="checkbox"]){line-height:42px}
 input[type="date"].input-sm,.input-group-sm>input.form-control[type="date"],.gform_fields .gfield .input-group-sm>input[type="date"]:not([type="radio"]):not([type="checkbox"]),.input-group-sm>input.input-group-addon[type="date"],.input-group-sm>.input-group-btn>input.btn[type="date"],.input-group-sm>.input-group-btn>input.gform_button[type="date"],.input-group-sm input[type="date"],input[type="time"].input-sm,.input-group-sm>input.form-control[type="time"],.gform_fields .gfield .input-group-sm>input[type="time"]:not([type="radio"]):not([type="checkbox"]),.input-group-sm>input.input-group-addon[type="time"],.input-group-sm>.input-group-btn>input.btn[type="time"],.input-group-sm>.input-group-btn>input.gform_button[type="time"],.input-group-sm input[type="time"],input[type="datetime-local"].input-sm,.input-group-sm>input.form-control[type="datetime-local"],.gform_fields .gfield .input-group-sm>input[type="datetime-local"]:not([type="radio"]):not([type="checkbox"]),.input-group-sm>input.input-group-addon[type="datetime-local"],.input-group-sm>.input-group-btn>input.btn[type="datetime-local"],.input-group-sm>.input-group-btn>input.gform_button[type="datetime-local"],.input-group-sm input[type="datetime-local"],input[type="month"].input-sm,.input-group-sm>input.form-control[type="month"],.gform_fields .gfield .input-group-sm>input[type="month"]:not([type="radio"]):not([type="checkbox"]),.input-group-sm>input.input-group-addon[type="month"],.input-group-sm>.input-group-btn>input.btn[type="month"],.input-group-sm>.input-group-btn>input.gform_button[type="month"],.input-group-sm input[type="month"]{line-height:34px}
 input[type="date"].input-lg,.input-group-lg>input.form-control[type="date"],.gform_fields .gfield .input-group-lg>input[type="date"]:not([type="radio"]):not([type="checkbox"]),.input-group-lg>input.input-group-addon[type="date"],.input-group-lg>.input-group-btn>input.btn[type="date"],.input-group-lg>.input-group-btn>input.gform_button[type="date"],.input-group-lg input[type="date"],input[type="time"].input-lg,.input-group-lg>input.form-control[type="time"],.gform_fields .gfield .input-group-lg>input[type="time"]:not([type="radio"]):not([type="checkbox"]),.input-group-lg>input.input-group-addon[type="time"],.input-group-lg>.input-group-btn>input.btn[type="time"],.input-group-lg>.input-group-btn>input.gform_button[type="time"],.input-group-lg input[type="time"],input[type="datetime-local"].input-lg,.input-group-lg>input.form-control[type="datetime-local"],.gform_fields .gfield .input-group-lg>input[type="datetime-local"]:not([type="radio"]):not([type="checkbox"]),.input-group-lg>input.input-group-addon[type="datetime-local"],.input-group-lg>.input-group-btn>input.btn[type="datetime-local"],.input-group-lg>.input-group-btn>input.gform_button[type="datetime-local"],.input-group-lg input[type="datetime-local"],input[type="month"].input-lg,.input-group-lg>input.form-control[type="month"],.gform_fields .gfield .input-group-lg>input[type="month"]:not([type="radio"]):not([type="checkbox"]),.input-group-lg>input.input-group-addon[type="month"],.input-group-lg>.input-group-btn>input.btn[type="month"],.input-group-lg>.input-group-btn>input.gform_button[type="month"],.input-group-lg input[type="month"]{line-height:53px}
@@ -1506,10 +1509,11 @@ header:not([class]) .navbar-default .nav>li .dropdown-menu{border:0;border-radiu
 header:not([class]) .navbar-default .nav>li .dropdown-menu .navbar-form{padding:10px 15px;margin:0}
 header:not([class]) .navbar-default .nav>li .dropdown-menu .navbar-form input{width:200px}
 .jumbotron h1{font-size:43px;font-weight:400}
-.jumbotron.front-page .row,.jumbotron.front-page .gform_fields,.jumbotron.front-page .gf_credit_card .ginput_full.ginput_cardextras,.gf_credit_card .jumbotron.front-page .ginput_full.ginput_cardextras,.jumbotron.front-page .gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .ginput_card_expiration_container,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .jumbotron.front-page .ginput_card_expiration_container{padding-top:200px}
+.jumbotron.front-page .row,.jumbotron.front-page .gform_fields{padding-top:200px}
 .jumbotron.content-page{border-bottom:1px solid #3a5382;padding:126px 0 28px;margin-bottom:30px}
 .jumbotron.content-page h1{color:#fff;font-size:81px;text-shadow:3px 3px 13px rgba(0,0,0,0.8)}
 .four-col li{-ms-flex-preferred-size:25%;flex-basis:25%;padding:0 15px}
+.text-columns{-webkit-column-count:2;column-count:2;-webkit-column-gap:20px;column-gap:20px}
 .callout-old li{border-right:1px solid #2a3c5f;border-left:1px solid rgba(255,255,255,0.1)}
 .callout-old li:first-of-type{border-left:0}
 .callout-old li:last-of-type{border-right:0}
@@ -1560,6 +1564,7 @@ footer .footer-content>div.info-col ul.footer-nav{margin:0;padding:0;list-style-
 footer .footer-content>div.info-col ul.footer-nav li{-ms-flex-preferred-size:25%;flex-basis:25%;margin-bottom:15px;text-align:left}
 footer .footer-content>div.info-col ul.footer-nav li:last-of-type{margin-bottom:0}
 footer .footer-content>div.info-col ul.footer-nav li a{font-size:15px}
+.modal:before{display:inline-block;vertical-align:middle;content:" ";height:100%}
 }@media(min-width:768px) and (max-width:991px){.visible-sm{display:block !important}
 table.visible-sm{display:table !important}
 tr.visible-sm{display:table-row !important}
@@ -1639,7 +1644,7 @@ header:not([class]) .navbar-default .nav>li:first-of-type{padding:0}
 header:not([class]) .navbar-default .nav>li.social a{font-size:23px}
 header:not([class]) .navbar-default .nav>li>a{font-size:18px}
 .jumbotron h1{font-size:43px;font-weight:400}
-.jumbotron.front-page .row,.jumbotron.front-page .gform_fields,.jumbotron.front-page .gf_credit_card .ginput_full.ginput_cardextras,.gf_credit_card .jumbotron.front-page .ginput_full.ginput_cardextras,.jumbotron.front-page .gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .ginput_card_expiration_container,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .jumbotron.front-page .ginput_card_expiration_container{padding-top:200px}
+.jumbotron.front-page .row,.jumbotron.front-page .gform_fields{padding-top:200px}
 .jumbotron.content-page{border-bottom:1px solid #3a5382;padding:196px 0 28px;margin-bottom:30px}
 .jumbotron.content-page h1{color:#fff;font-size:81px;text-shadow:3px 3px 13px rgba(0,0,0,0.8)}
 .three-col li{-ms-flex-preferred-size:33.3333333333%;flex-basis:33.3333333333%;padding:0 14px 14px 14px}
@@ -1737,7 +1742,7 @@ header:not([class]) .navbar-default .nav>li>a{font-size:23px}
 header:not([class]) .navbar-default .nav>li{padding:0 0 0 35px}
 header:not([class]) .navbar-default .nav>li>a{font-size:23px}
 .jumbotron h1{font-size:43px;font-weight:400}
-.jumbotron.front-page .row,.jumbotron.front-page .gform_fields,.jumbotron.front-page .gf_credit_card .ginput_full.ginput_cardextras,.gf_credit_card .jumbotron.front-page .ginput_full.ginput_cardextras,.jumbotron.front-page .gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .ginput_card_expiration_container,.gf_credit_card .ginput_full.ginput_cardextras .ginput_cardinfo_left .jumbotron.front-page .ginput_card_expiration_container{padding-top:200px}
+.jumbotron.front-page .row,.jumbotron.front-page .gform_fields{padding-top:200px}
 .jumbotron.content-page{border-bottom:1px solid #3a5382;padding:392px 0 28px;margin-bottom:30px}
 .jumbotron.content-page h1{color:#fff;font-size:81px;text-shadow:3px 3px 13px rgba(0,0,0,0.8)}
 }@media screen and (max-width:767px){.table-responsive{width:100%;margin-bottom:21px;overflow-y:hidden;-ms-overflow-style:-ms-autohiding-scrollbar;border:1px solid #ddd}

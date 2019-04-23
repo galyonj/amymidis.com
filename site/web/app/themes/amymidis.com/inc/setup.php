@@ -135,9 +135,10 @@ add_action( 'gform_admin_pre_render', 'add_merge_tags' );
 function add_merge_tags( $form ) {
 	?>
 	<script type="text/javascript">
-		gform.addFilter('gform_merge_tags', 'add_merge_tags');
-		function add_merge_tags(mergeTags, elementId, hideAllFields, excludeFieldTypes, isPrepop, option){
-			mergeTags["custom"].tags.push({ tag: '{site_name}', label: 'Site Name' });
+		gform.addFilter( 'gform_merge_tags', 'add_merge_tags' );
+
+		function add_merge_tags( mergeTags, elementId, hideAllFields, excludeFieldTypes, isPrepop, option ) {
+			mergeTags['custom'].tags.push( {tag: '{site_name}', label: 'Site Name'} );
 
 			return mergeTags;
 		}
@@ -146,3 +147,23 @@ function add_merge_tags( $form ) {
 	//return the form object from the php hook
 	return $form;
 }
+
+add_action('rest_api_init', 'register_rest_images' );
+function register_rest_images(){
+	register_rest_field( array('post'),
+		'fimg_url',
+		array(
+			'get_callback'    => 'get_rest_featured_image',
+			'update_callback' => null,
+			'schema'          => null,
+		)
+	);
+}
+function get_rest_featured_image( $object, $field_name, $request ) {
+	if( $object['featured_media'] ){
+		$img = wp_get_attachment_image_src( $object['featured_media'], 'app-thumb' );
+		return $img[0];
+	}
+	return false;
+}
+

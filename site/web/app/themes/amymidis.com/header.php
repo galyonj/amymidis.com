@@ -11,7 +11,7 @@
 <html class="no-js" lang="<?php echo get_bloginfo( 'language' ); ?>">
 <head>
 	<meta charset="<?php echo get_bloginfo( 'charset' ); ?>">
-
+	<meta name="norton-safeweb-site-verification" content="ol09ow3xwdam-m0fk4k4-87azw57hcclsjucdzjex55be048ihzsn7jzl9oc4z61di-fq55ftrycaxpycs72f43y5v55hemlkno0y5vxc9p3npn5g6j9n1xbbuzstcni" />
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -64,6 +64,7 @@
 	<i class="fas fa-chevron-up"></i>
 	<span class="sr-only">scroll to top of page</span>
 </a>
+<?php get_template_part('view/content', 'modal'); ?>
 <div class="wrapper">
 	<header role="banner">
 		<?php get_template_part( 'view/header', 'navbar'); ?>

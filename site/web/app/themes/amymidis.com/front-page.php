@@ -35,22 +35,37 @@ if ( have_posts() ) : while( have_posts() ) :
 			</article>
 		</div>
 	</main>
-	<!--<div class="juicer-wrapper">
+	<?php
+	$args = array(
+		'posts_per_page' => 1,
+		'category_name' => 'announcements',
+		'post_status' => 'publish'
+	);
+
+	$announcements = new WP_Query( $args );
+
+	if( $announcements -> have_posts() ) : ?>
+	<div class="announcement-wrapper">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12">
-					<?php /*juicer_feed("name=votemidis&per=6"); */?>
+				<div class="col-md-8 col-md-offset-2">
+					<?php while( $announcements->have_posts() ) : $announcements->the_post(); ?>
+						<h2><?php the_title(); ?></h2>
+						<p class="lead"><?php echo get_the_excerpt(); ?></p>
+						<p><a class="btn btn-large btn-default" href="<?php the_permalink(); ?>" rel="bookmark">Get the details here!</a></p>
+					<?php endwhile; ?>
 				</div>
 			</div>
 		</div>
-	</div>-->
+	</div>
+	<?php endif; wp_reset_postdata(); ?>
 
 	<?php
 	$reviews_headline = get_field( 'reviews_title' );
 	$reviews_cta = get_field( 'reviews_cta' );
 	$reviews_bkg      = get_field( 'reviews_bkg_img' ); ?>
 	<div class="jumbotron reviews jarallax" data-jarallax data-speed="0.5">
-		<div class="triangle"></div>
+		<div class="review-triangle"></div>
 		<img class="jarallax-img" src="<?php echo esc_url( $reviews_bkg['url'] ); ?>" alt="<?php echo $reviews_bkg['alt']; ?>">
 		<div class="container">
 			<?php if($reviews_headline) : ?>
